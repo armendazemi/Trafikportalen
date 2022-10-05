@@ -48,9 +48,6 @@
                 <div class="title-and-export">
                     <h1 class="title">KORTDATA</h1>
                     <button type="button" class="default-button" data-bs-toggle="modal" data-bs-target="#exportModal"><i class="fa-regular fa-arrow-down-to-line"></i>Export</button>
-                    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        Launch static backdrop modal
-                      </button> -->
                 </div>
                 <div class="search-and-filters">
                     <div class="kort-nummer">
@@ -65,17 +62,14 @@
                     <div class="last-used-from">
                         <p>Senast använd</p>
                         <input type="date" name="" id="date-from" placeholder="Från" >
-                        <!-- <i class="fa-light fa-calendar input-icon"></i> -->
                     </div>
                     <div class="last-used-too">
                         <p>Senast använd</p>
                         <input type="date" name="" id="date-to" placeholder="Till">
-                        <!-- <i class="fa-light fa-calendar input-icon"></i> -->
                     </div>
                     <button type="button" class="default-button filter-btn">Filtrera</button>
                 </div>
                 <div class="results">
-                    <!-- <p>Filtrera ovan för att få ut ett resultat</p>  -->
                     <div class="display-results">
                             <div class="column-titles">
                                 <div class="form-check col-4">
@@ -180,7 +174,7 @@
         </div>
         <div class="modal-footer">
             <button class="default-outline-button">Avbryt</button>
-            <button class="default-button">SPÄRRA KORTET</button>
+            <button class="default-button disable-card-btn">SPÄRRA KORTET</button>
         </div>
         </div>
     </div>
@@ -201,7 +195,24 @@
         </div>
         <div class="modal-footer">
             <button class="default-outline-button">NEJ, AVBRYT</button>
-            <button class="default-button">JA, SKAPA VÄRDEKOD</button>
+            <button class="default-button create-discount-btn" data-bs-toggle="modal" data-bs-target="#displayDiscountModal" data-bs-dismiss="modal">JA, SKAPA VÄRDEKOD</button>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- VÄRDEKOD PRESENTATION 2/2 -->
+<div class="modal fade display-discount-modal" id="displayDiscountModal" tabindex="-1" aria-labelledby="displayDiscountModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h5 class="modal-title">VÄRDEKOD: </h5>
+            <p class="discount-code-field">sx250sek <i class="fa-light fa-copy copy-code-icon"></i></p>
+        </div>
+        <div class="modal-footer">
+            <button class="default-button create-discount-btn">STÄNG</button>
         </div>
         </div>
     </div>

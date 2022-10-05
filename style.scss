@@ -6,6 +6,7 @@
 $primary: #17A0B4;
 $primaryDark:#178596 ;
 $light: #E8F1F2;
+$primaryRed: #A9170E;
 /* ----------------------*/
 /* ------ GENERAL -------*/
 /* ---------------------*/
@@ -392,7 +393,7 @@ header {
   background-color: #E8F1F2;
   border: 1px solid #C8D4D6;
   color: black;
-  width: 100%;
+  width: 230px;
 }
 
 .status {
@@ -441,7 +442,7 @@ header {
 
 
 // Spärra kort Modal
-.lock-card-modal, .discount-modal {
+.lock-card-modal, .discount-modal, .display-discount-modal {
     .modal-dialog {
         max-width: 700px;
     }
@@ -479,4 +480,22 @@ header {
         justify-content: center;
         border: none;
     }
+    .disable-card-btn {
+        background-color: $primaryRed;
+    }
+}
+
+.display-discount-modal {
+    .discount-code-field {
+        background-color: #E8F1F2;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 10px;
+        border-radius: 3px;
+
+        .copy-code-icon {
+            cursor: pointer;
+        }
+    }
+
 }

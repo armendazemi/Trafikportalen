@@ -350,7 +350,7 @@ header {
   background-color: #E8F1F2;
   border: 1px solid #C8D4D6;
   color: black;
-  width: 100%;
+  width: 230px;
 }
 
 .status {
@@ -386,29 +386,29 @@ header {
   border-top: none;
 }
 
-.lock-card-modal .modal-dialog, .discount-modal .modal-dialog {
+.lock-card-modal .modal-dialog, .discount-modal .modal-dialog, .display-discount-modal .modal-dialog {
   max-width: 700px;
 }
-.lock-card-modal .modal-header, .discount-modal .modal-header {
+.lock-card-modal .modal-header, .discount-modal .modal-header, .display-discount-modal .modal-header {
   border-bottom: none;
 }
-.lock-card-modal .modal-content, .discount-modal .modal-content {
+.lock-card-modal .modal-content, .discount-modal .modal-content, .display-discount-modal .modal-content {
   background: #EFF3F4;
 }
-.lock-card-modal .modal-content .modal-title, .discount-modal .modal-content .modal-title {
+.lock-card-modal .modal-content .modal-title, .discount-modal .modal-content .modal-title, .display-discount-modal .modal-content .modal-title {
   font-size: 28px;
   text-transform: uppercase;
   font-weight: 600;
   text-align: center;
   margin-bottom: 24px;
 }
-.lock-card-modal .modal-content .modal-info, .discount-modal .modal-content .modal-info {
+.lock-card-modal .modal-content .modal-info, .discount-modal .modal-content .modal-info, .display-discount-modal .modal-content .modal-info {
   text-align: center;
   margin-bottom: 48px;
   color: #49454F;
   font-weight: 300;
 }
-.lock-card-modal .modal-content #lock-card-comment, .discount-modal .modal-content #lock-card-comment {
+.lock-card-modal .modal-content #lock-card-comment, .discount-modal .modal-content #lock-card-comment, .display-discount-modal .modal-content #lock-card-comment {
   width: 100%;
   resize: none;
   background-color: #D9E6E8;
@@ -416,10 +416,24 @@ header {
   border-radius: 20px;
   padding: 15px;
 }
-.lock-card-modal .modal-body, .discount-modal .modal-body {
+.lock-card-modal .modal-body, .discount-modal .modal-body, .display-discount-modal .modal-body {
   padding: 38px 42.5px 32px;
 }
-.lock-card-modal .modal-footer, .discount-modal .modal-footer {
+.lock-card-modal .modal-footer, .discount-modal .modal-footer, .display-discount-modal .modal-footer {
   justify-content: center;
   border: none;
+}
+.lock-card-modal .disable-card-btn, .discount-modal .disable-card-btn, .display-discount-modal .disable-card-btn {
+  background-color: #A9170E;
+}
+
+.display-discount-modal .discount-code-field {
+  background-color: #E8F1F2;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+  border-radius: 3px;
+}
+.display-discount-modal .discount-code-field .copy-code-icon {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
