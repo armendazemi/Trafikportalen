@@ -13,7 +13,6 @@ let allExportOptionsRadioButton = document.querySelectorAll('.export-option');
 
 
 
-
 // Disable 'dateTo' until we've selected a 'dateFrom'
 datetTo.disabled = 'true';
 

@@ -33,6 +33,7 @@
 
     <div class="main container-fluid">
         <div class="row">
+            <!-- PAGE LINKS LEFT SIDE -->
             <div class="selections col-3">
                 <div class="links">
                     <a href="#" class="page-link-item active">Kortdata</a>
@@ -44,11 +45,15 @@
                     <button type="button" class="clear-button"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logga ut</button>
                 </div>
             </div>
+
+            <!-- KORT DATA (MAIN MIDDLE CONTAINER)  -->
             <div class="filters col-9">
                 <div class="title-and-export">
                     <h1 class="title">KORTDATA</h1>
                     <button type="button" class="default-button" data-bs-toggle="modal" data-bs-target="#exportModal"><i class="fa-regular fa-arrow-down-to-line"></i>Export</button>
                 </div>
+
+                <!-- FILTERS -->
                 <div class="search-and-filters">
                     <div class="kort-nummer">
                         <p>Kortnummer</p>
@@ -69,6 +74,8 @@
                     </div>
                     <button type="button" class="default-button filter-btn">Filtrera</button>
                 </div>
+
+                <!-- COLUMN NAMES FOR CARDS -->
                 <div class="results">
                     <div class="display-results">
                             <div class="column-titles">
@@ -80,7 +87,7 @@
                                 <p class="col-2">Restvärde</p>
                                 <p class="col-4">Status</p>
                             </div>
-
+                    <!-- -------------- CARDS -------------- -->
                             <div class="cards">
                                 <div class="card-info">
                                     <div class="form-check col-4">
@@ -89,21 +96,23 @@
                                     </div>
                                     <p class="col-2">2022-02-01</p>
                                     <p class="col-2">1256 SEK</p>
+                                    <!-- Status and 3 dot button container  -->
                                     <div class="status-and-options-button col-4">
                                         <p class="col-4 status">Aktiv</p>
                                         <div class="btn-group dropstart">
                                             <button type="button" class="kebab-btn" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                                             </button>
+
+                                            <!-- Dropdown menu links -->
                                             <ul class="dropdown-menu">
-                                              <!-- Dropdown menu links -->
                                                 <li data-bs-toggle="modal" data-bs-target="#lockCardModal"><a class="dropdown-item">Spärra</a></li>
                                                 <li><hr class="dropdown-divider"></li>
                                                 <li><a class="dropdown-item" href="#">Återbetala</a></li>
                                                 <li><hr class="dropdown-divider"></li>
                                                 <li data-bs-toggle="modal" data-bs-target="#discountModal"><a class="dropdown-item" href="#">Skapa värdekod</a></li>
                                                 <li><hr class="dropdown-divider"></li>
-                                                <li><a class="dropdown-item" href="#">Logg</a></li>
+                                                <li data-bs-toggle="modal" data-bs-target="#cardLog"><a class="dropdown-item" href="#">Logg</a></li>
                                                 <li><hr class="dropdown-divider"></li>
                                                 <li id="radera"><a class="dropdown-item" href="#">Radera</a></li>
                                             </ul>
@@ -111,6 +120,7 @@
                                     </div>  
                                 </div>
                         </div>
+                        <!-- -------------- CARDS  END-------------- -->
                     </div> 
                 </div>
             </div>
@@ -157,7 +167,7 @@
 </div>
 
 <!-- SPÄRRA KORT MODAL -->
-<div class="modal fade lock-card-modal" id="lockCardModal" tabindex="-1" aria-labelledby="lockCardModal" aria-hidden="true">
+<div class="modal fade lock-card-modal" id="lockCardModal" tabindex="-1" aria-labelledby="lockCardModal" aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
         <div class="modal-header">
@@ -173,7 +183,7 @@
             </div>
         </div>
         <div class="modal-footer">
-            <button class="default-outline-button">Avbryt</button>
+            <button class="default-outline-button" data-bs-dismiss="modal">Avbryt</button>
             <button class="default-button disable-card-btn">SPÄRRA KORTET</button>
         </div>
         </div>
@@ -181,7 +191,7 @@
 </div>
 
 <!-- SKAPA VÄRDEKOD 1/2 -->
-<div class="modal fade discount-modal" id="discountModal" tabindex="-1" aria-labelledby="discountModal" aria-hidden="true">
+<div class="modal fade discount-modal" id="discountModal" tabindex="-1" aria-labelledby="discountModal" aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
         <div class="modal-header">
@@ -194,14 +204,14 @@
     
         </div>
         <div class="modal-footer">
-            <button class="default-outline-button">NEJ, AVBRYT</button>
+            <button class="default-outline-button" data-bs-dismiss="modal">NEJ, AVBRYT</button>
             <button class="default-button create-discount-btn" data-bs-toggle="modal" data-bs-target="#displayDiscountModal" data-bs-dismiss="modal">JA, SKAPA VÄRDEKOD</button>
         </div>
         </div>
     </div>
 </div>
 <!-- VÄRDEKOD PRESENTATION 2/2 -->
-<div class="modal fade display-discount-modal" id="displayDiscountModal" tabindex="-1" aria-labelledby="displayDiscountModal" aria-hidden="true">
+<div class="modal fade display-discount-modal" id="displayDiscountModal" tabindex="-1" aria-labelledby="displayDiscountModal" aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
         <div class="modal-header">
@@ -212,7 +222,56 @@
             <p class="discount-code-field">sx250sek <i class="fa-light fa-copy copy-code-icon"></i></p>
         </div>
         <div class="modal-footer">
-            <button class="default-button create-discount-btn">STÄNG</button>
+            <button class="default-button create-discount-btn" data-bs-dismiss="modal">STÄNG</button>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- KORT LOGG -->
+<div class="modal fade card-log" id="cardLog" tabindex="-1" aria-labelledby="cardLog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h5 class="modal-title">KORTLOGG </h5>
+            <p class="card-number">KORT: 5555 5555 5555 5555</p>
+
+            <div class="column-titles-log">
+                <p class="col-2">Datum</p>
+                <p class="col-2">Händelse</p>
+                <p class="col-2">Användare</p>
+                <p class="col-6">Kommentar</p>
+            </div>
+            <div class="card-logs">
+                <div class="card-log">
+                    <p class="col-2 log-date">2022-01-01</p>
+                    <p class="col-2 log-status">Spärrat Kort</p>
+                    <p class="col-2 log-user">EN</p>
+                    <p class="col-6 log-comment">Valfri text inskriven från användaren</p>
+                </div>
+                <div class="card-log">
+                    <p class="col-2 log-date">2022-01-01</p>
+                    <p class="col-2 log-status">Spärrat Kort</p>
+                    <p class="col-2 log-user">EN</p>
+                    <p class="col-6 log-comment">Valfri text inskriven från användaren</p>
+                </div>
+                <div class="card-log">
+                    <p class="col-2 log-date">2022-01-01</p>
+                    <p class="col-2 log-status">Spärrat Kort</p>
+                    <p class="col-2 log-user">EN</p>
+                    <p class="col-6 log-comment">Valfri text inskriven från användaren</p>
+                </div>
+                <div class="card-log">
+                    <p class="col-2 log-date">2022-01-01</p>
+                    <p class="col-2 log-status">Spärrat Kort</p>
+                    <p class="col-2 log-user">EN</p>
+                    <p class="col-6 log-comment">Valfri text inskriven från användaren</p>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
         </div>
         </div>
     </div>

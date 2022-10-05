@@ -436,4 +436,39 @@ header {
 }
 .display-discount-modal .discount-code-field .copy-code-icon {
   cursor: pointer;
+}
+
+.card-log .modal-dialog {
+  max-width: 900px;
+}
+.card-log .modal-content {
+  background: #EFF3F4;
+}
+.card-log .modal-body {
+  padding: 0 24px 50px;
+}
+.card-log .modal-header, .card-log .modal-footer {
+  border: none;
+}
+.card-log .modal-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.card-log .card-number {
+  font-size: 22px;
+  font-weight: 400;
+}
+.card-log .column-titles-log {
+  display: flex;
+}
+.card-log .card-log {
+  display: flex;
+  padding: 16px 8px;
+  border-radius: 3px;
+}
+.card-log .card-log p {
+  margin: 0;
+}
+.card-log .card-log:nth-of-type(odd) {
+  background-color: #E8F1F2;
 }/*# sourceMappingURL=style.css.map */

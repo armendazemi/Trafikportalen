@@ -7,6 +7,7 @@ $primary: #17A0B4;
 $primaryDark:#178596 ;
 $light: #E8F1F2;
 $primaryRed: #A9170E;
+$backgroundColor: #EFF3F4;
 /* ----------------------*/
 /* ------ GENERAL -------*/
 /* ---------------------*/
@@ -196,7 +197,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #EFF3F4;
+  background-color: $backgroundColor;
   height: calc(100vh - 73px);
   padding: 0;
   .links {
@@ -373,7 +374,7 @@ header {
   padding: 16px 10px;
   align-items: center;
   &:nth-child(odd) {
-    background: #EFF3F4;;
+    background: $backgroundColor;
   }
   p {
     margin: 0;
@@ -463,7 +464,7 @@ header {
             color: #49454F;
             font-weight: 300;
         }
-        background: #EFF3F4;
+        background: $backgroundColor;
         #lock-card-comment {
             width: 100%;
             resize: none;
@@ -485,6 +486,7 @@ header {
     }
 }
 
+// Discount modal
 .display-discount-modal {
     .discount-code-field {
         background-color: #E8F1F2;
@@ -498,4 +500,46 @@ header {
         }
     }
 
+}
+
+// Card log Modal
+.card-log {
+    .modal-dialog {
+        max-width: 900px;
+    }
+    .modal-content {
+        background: $backgroundColor;
+    }
+    .modal-body {
+        padding: 0 24px 50px;
+    }
+    .modal-header, .modal-footer {
+        border: none;
+    }
+    .modal-title {
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .card-number {
+        font-size: 22px;
+        font-weight: 400;
+    }
+
+    // Card log column titles
+    .column-titles-log {
+        display: flex;
+        
+    }
+    //Card Logs
+    .card-log {
+        display: flex;
+        padding: 16px 8px;
+        border-radius: 3px;
+        p {
+            margin: 0;
+        }
+        &:nth-of-type(odd) {
+            background-color: #E8F1F2;
+        }
+    }
 }
