@@ -51,7 +51,7 @@
             <div class="filters col-9">
                 <div class="title-and-export">
                     <h1 class="title">KORTDATA</h1>
-                    <button type="button" class="default-button" data-bs-toggle="modal" data-bs-target="#exportModal"><i class="fa-regular fa-arrow-down-to-line"></i>Export</button>
+                    <button type="button" class="default-button disabled" data-bs-toggle="modal" data-bs-target="#exportModal"><i class="fa-regular fa-arrow-down-to-line"></i>Export</button>
                 </div>
 
                 <!-- FILTERS -->
@@ -62,13 +62,16 @@
                     </div>
                     <div class="rest-värde">
                         <p>Restvärde</p>
-                        <input type="text" name="" id="rest-värde" placeholder="Fyll i värde">
-                        <i class="fa-regular fa-chevron-up input-icon toggle-value-slider"></i>
-                        <div class="value-slider" style="position: absolute;">
-                            <input type="range" class="form-range" min="0" max="200" id="customRange1">
-                            <div class="range-value-labels">
-                                <p>1</p>
-                                <p>5000</p>
+                        <div class="dropdown">
+                            <a class="selector toggle-value-slider" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                Fyll i värde<i class="fa-regular fa-chevron-down"></i>
+                              </a>
+                            <div class="value-slider dropdown-menu dropdown-menu-selector" aria-labelledby="dropdownMenuButton1" style="position: absolute; display: none;">
+                                <input type="range" class="form-range" min="0" max="200" id="customRange1" >
+                                <div class="range-value-labels">
+                                    <p>1</p>
+                                    <p>5000</p>
+                                </div>
                             </div>
                         </div>
                         

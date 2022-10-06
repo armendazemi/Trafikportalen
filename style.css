@@ -15,7 +15,7 @@ a {
   color: #0B424A;
 }
 a:hover {
-  color: #178596;
+  color: #0B424A;
 }
 
 input {
@@ -59,10 +59,15 @@ input:focus-visible {
   transition: background ease-out 300ms;
 }
 .default-button:hover {
-  background: #33cee5;
+  background: #68C1CE;
 }
 .default-button:active {
-  background: #117887;
+  background: #128090;
+}
+.default-button.disabled {
+  background: #D2E0E2;
+  cursor: default;
+  pointer-events: none;
 }
 
 .default-outline-button {
@@ -195,7 +200,11 @@ header {
 }
 .selections .page-link-item {
   width: 100%;
-  padding: 5px 30px;
+  padding: 10px 30px;
+  transition: background ease-out 300ms;
+}
+.selections .page-link-item:hover {
+  background: #E8F1F2;
 }
 .selections .page-link-item.active {
   background: #BAE9F0;
@@ -258,6 +267,7 @@ header {
   background-color: white;
   border-radius: 5px;
   display: none;
+  border: 1px solid #E8F1F2;
   padding: 10px 10px 5px;
 }
 .search-and-filters .rest-värde .value-slider .form-range {
@@ -273,10 +283,11 @@ header {
   justify-content: space-between;
   padding: 8px 10px;
   align-items: center;
-  background: #E8F1F2;
+  background: white;
+  border-radius: 5px;
 }
 .search-and-filters .dropdown-menu-selector {
-  background-color: #E8F1F2;
+  background-color: white;
   width: 100%;
 }
 

@@ -21,10 +21,9 @@ $form-range-thumb-bg: $primary;
 a {
   text-decoration: none;
   color: #0B424A;
-
-  &:hover {
-    color: #178596;
-  }
+    &:hover {
+        color: #0B424A;
+    }
 }
 
 
@@ -69,10 +68,15 @@ input {
   text-transform: uppercase;
   transition: background ease-out 300ms;
   &:hover {
-    background: lighten($primary, 15%);
+    background:  #68C1CE;
   }
   &:active {
-    background: darken(#17A0B4, 10%);
+    background: #128090;
+  }
+  &.disabled {
+    background: #D2E0E2;
+    cursor: default;
+    pointer-events: none;
   }
 }
 
@@ -159,7 +163,9 @@ header {
     color: #17A0B4;
     font-size: 24px;
   }
+  
 }
+
 
 /* ----- Right-side header ------*/
 
@@ -215,12 +221,17 @@ header {
   }
   .page-link-item {
     width: 100%;
-    padding: 5px 30px;
+    padding: 10px 30px;
+    transition: background ease-out 300ms;
+    &:hover {
+        background: $light;
+    }
+    &.active {
+        background: #BAE9F0;
+        font-weight: 600;
+      }
   }
-  .page-link-item.active {
-    background: #BAE9F0;
-    font-weight: 600;
-  }
+ 
 }
 
 .logout .btn {
@@ -288,6 +299,7 @@ header {
         background-color: white;
         border-radius: 5px;
         display: none;
+        border: 1px solid $light;
         padding: 10px 10px 5px;
         .form-range {
             border: none;
@@ -305,10 +317,11 @@ header {
     justify-content: space-between;
     padding: 8px 10px;
     align-items: center;
-    background: $light;
+    background: white;
+    border-radius: 5px;
   }
   .dropdown-menu-selector {
-    background-color: $light;
+    background-color: white;
     width: 100%;
   }
 }
