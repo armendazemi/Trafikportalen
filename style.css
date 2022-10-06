@@ -149,8 +149,12 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 16px;
   padding-right: 30px;
+}
+.user a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .username {
@@ -264,6 +268,17 @@ header {
   justify-content: space-between;
   padding: 0 10px;
 }
+.search-and-filters .selector {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 10px;
+  align-items: center;
+  background: #E8F1F2;
+}
+.search-and-filters .dropdown-menu-selector {
+  background-color: #E8F1F2;
+  width: 100%;
+}
 
 .kort-nummer {
   flex-grow: 2;
@@ -320,7 +335,6 @@ header {
 
 /* Card  */
 .cards {
-  overflow-y: scroll;
   max-height: 90%;
   min-height: 250px;
 }

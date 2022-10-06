@@ -168,8 +168,12 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 16px;
   padding-right: 30px;
+  a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
 }
 
 .username {
@@ -294,6 +298,18 @@ header {
         }
     }
   }
+
+  .selector {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    align-items: center;
+    background: $light;
+  }
+  .dropdown-menu-selector {
+    background-color: $light;
+    width: 100%;
+  }
 }
 
 .kort-nummer {
@@ -358,7 +374,7 @@ header {
 /* Card  */
 
 .cards {
-    overflow-y: scroll;
+    // overflow-y: scroll;
     max-height: 90%;
     min-height: 250px;
 // CUSTOM SCROLL BAR
@@ -410,7 +426,7 @@ header {
 }
 
 .card-info .dropdown-menu {
-  background-color: #E8F1F2;
+  background-color: $light;
   border: 1px solid #C8D4D6;
   color: black;
   width: 230px;
@@ -508,7 +524,7 @@ header {
 // Discount modal
 .display-discount-modal {
     .discount-code-field {
-        background-color: #E8F1F2;
+        background-color: $light;
         display: flex;
         justify-content: space-between;
         padding: 15px 10px;
@@ -558,7 +574,7 @@ header {
             margin: 0;
         }
         &:nth-of-type(odd) {
-            background-color: #E8F1F2;
+            background-color: $light;
         }
     }
 }
