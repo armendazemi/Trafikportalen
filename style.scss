@@ -8,6 +8,8 @@ $primaryDark:#178596 ;
 $light: #E8F1F2;
 $primaryRed: #A9170E;
 $backgroundColor: #EFF3F4;
+
+$form-range-thumb-bg: $primary;
 /* ----------------------*/
 /* ------ GENERAL -------*/
 /* ---------------------*/
@@ -275,6 +277,23 @@ header {
   .last-used-from, .last-used-too {
     position: relative;
   } 
+  .rest-värde {
+    .value-slider {
+        width: 100%;
+        background-color: white;
+        border-radius: 5px;
+        display: none;
+        padding: 10px 10px 5px;
+        .form-range {
+            border: none;
+        }
+        .range-value-labels {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+        }
+    }
+  }
 }
 
 .kort-nummer {
@@ -341,7 +360,7 @@ header {
 .cards {
     overflow-y: scroll;
     max-height: 90%;
-    min-height: 500px;
+    min-height: 250px;
 // CUSTOM SCROLL BAR
 &::-webkit-scrollbar {
     width: 20px;

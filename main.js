@@ -11,22 +11,32 @@ let allCardRadioButtons = document.querySelectorAll('.card-check-btn');
 let exportAllOptionsButton = document.querySelector('#exportAll');
 let allExportOptionsRadioButton = document.querySelectorAll('.export-option');
 
+let toggleValueValueSliderButton = document.querySelector('.toggle-value-slider');
+let valueSlider = document.querySelector('.value-slider');
+
 
 
 // Disable 'dateTo' until we've selected a 'dateFrom'
 datetTo.disabled = 'true';
 
+// Set the min and max range for the dates
+dateFrom.min = '2015-01-01';
+
+let yourDate = new Date().toISOString().slice(0, 10);
+
+
+console.log('TODAY : ' + yourDate);
 // Check for changed date and enable 'dateTo' picker.
 dateFrom.onchange = () => {
-    console.log('Changed date...');
-    let value = dateFrom.value;
-    console.log(typeof value);
-    if(value) {
+    let dateFromValue = dateFrom.value;
+
+    if(dateFromValue) {
         datetTo.disabled = '';
-        datetTo.value = value;
+        datetTo.value = dateFromValue;
+        datetTo.min = dateFromValue
     }else {
         datetTo.disabled = 'true';
-        datetTo.value = '';2
+        datetTo.value = '';
     }
 }
 
@@ -37,19 +47,16 @@ dateFrom.onchange = () => {
 checkAllRadioButton.addEventListener('click', () => {
     // Once we click, the state will change, this will be opposite to the actual state
     if (!checkAllRadioButton.checked) {
-        console.log('uncheck all');
         [...allCardRadioButtons].forEach((radioBtn) => {
             radioBtn.checked = false;
         });
     }else {
-        console.log('check all');
         [...allCardRadioButtons].forEach((radioBtn) => {
             radioBtn.checked = true;
         });
     }
 });
-
-console.log(exportAllOptionsButton);
+ 
 // Check all the options for export
 exportAllOptionsButton.addEventListener('click', () => {
     if (!exportAllOptionsButton.checked) {
@@ -63,3 +70,12 @@ exportAllOptionsButton.addEventListener('click', () => {
     }
 });
 
+
+toggleValueValueSliderButton.addEventListener('click', () => {
+    if (valueSlider.style.display == 'none') {
+        valueSlider.style.display = 'block'
+    }
+    else {
+        valueSlider.style.display = 'none'
+    }
+})
