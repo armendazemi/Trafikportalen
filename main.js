@@ -70,12 +70,18 @@ exportAllOptionsButton.addEventListener('click', () => {
     }
 });
 
-
+// Display value slider and change cheveron from point down to up.
 toggleValueValueSliderButton.addEventListener('click', () => {
     if (valueSlider.style.display == 'none') {
         valueSlider.style.display = 'block'
+        let chevron = valueSlider.parentNode.querySelector('i');
+        chevron.classList.remove('fa-chevron-up');
+        chevron.classList.add('fa-chevron-down');
     }
     else {
         valueSlider.style.display = 'none'
+        let chevron = valueSlider.parentNode.querySelector('i');
+        chevron.classList.remove('fa-chevron-down');
+        chevron.classList.add('fa-chevron-up');
     }
 })
