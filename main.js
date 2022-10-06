@@ -20,12 +20,10 @@ let valueSlider = document.querySelector('.value-slider');
 datetTo.disabled = 'true';
 
 // Set the min and max range for the dates
+let today = new Date().toISOString().slice(0, 10);
 dateFrom.min = '2015-01-01';
+dateFrom.max = today;
 
-let yourDate = new Date().toISOString().slice(0, 10);
-
-
-console.log('TODAY : ' + yourDate);
 // Check for changed date and enable 'dateTo' picker.
 dateFrom.onchange = () => {
     let dateFromValue = dateFrom.value;
@@ -40,7 +38,6 @@ dateFrom.onchange = () => {
     }
 }
 
-// Gather all data on 'Filter' button click.
 
 
 // Check all card radio buttons
@@ -84,4 +81,10 @@ toggleValueValueSliderButton.addEventListener('click', () => {
         chevron.classList.remove('fa-chevron-down');
         chevron.classList.add('fa-chevron-up');
     }
+});
+
+let slider = document.querySelector('.form-range');
+
+slider.addEventListener('slide', () => {
+    console.log('sliding');
 })
