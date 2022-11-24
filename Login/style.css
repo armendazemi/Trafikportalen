@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  background-color: #f5f5f5;
+}
+
+.login-wrapper .inner-wrapper {
+  display: flex;
+  max-width: 1060px;
+  box-shadow: 0px 4px 20px rgba(141, 141, 141, 0.25);
+  padding: 0;
+  border-radius: 10px;
+}
+.login-wrapper .row {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+.login-wrapper .login-left {
+  position: relative;
+  height: 660px;
+  max-width: 530px;
+  background-image: url(./resources/buss-bild.png);
+  background-size: 100%;
+  border-radius: 10px 0 0 10px;
+}
+.login-wrapper .login-left .title-and-icon {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+  padding: 24px;
+  color: white;
+  z-index: 1000;
+}
+.login-wrapper .login-left .title-and-icon .title {
+  margin: 0;
+}
+.login-wrapper .login-right {
+  height: 660px;
+  max-width: 530px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-wrapper .login-right .login-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.login-wrapper .login-right .login-options .login-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  padding: 40px;
+  border: 1px solid #E5E5E5;
+  border-radius: 10px;
+  background-color: #F7FBFC;
+  cursor: pointer;
+}
+.login-wrapper .login-right .login-options .login-option .option-text {
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21.6px;
+}/*# sourceMappingURL=style.css.map */
