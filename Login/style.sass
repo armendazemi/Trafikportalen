@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+@import url("https://use.typekit.net/sxz2efx.css")
 
+$primaryText: #2A3031
 *
     font-family: 'Poppins', sans-serif
 html
@@ -60,3 +62,60 @@ html
                     font-size: 18px
                     line-height: 21.6px
             
+//------------------LOGIN BANKID------------------//
+.login-bank-right
+    .back-button
+        padding: 30px 0 0 25px
+    .login-details
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 70px 106px 0 74px
+        .bankid-logo
+            width: 82px
+        .title 
+            font-size: 24px
+            font-weight: 500
+            line-height: 28.8px
+            color: $primaryText
+        .input-and-text
+            display: flex
+            flex-direction: column
+            width: 100%
+            padding: 0 8px
+            .text
+                margin-top: 24px
+                display: flex
+                justify-content: space-between
+                padding-bottom: 4px
+                color: $primaryText
+                & > p
+                    margin: 0
+                .personnummer
+                    font-size: 14px
+                    font-weight: 500
+                    line-height: 17px
+                    letter-spacing: 0.25px
+                .required-small
+                    font-size: 12px
+                    font-weight: 500
+                    line-height: 14.4px
+                    letter-spacing: 0.25px
+                    color: #909194 
+            input
+                border: 1px solid #E8F1F2
+                padding: 7px 10px
+                border-radius: 3px
+                &::placeholder
+                    color: #C8D4D6
+            button
+                margin-top: 34px
+                background-color: #17A0B4
+                font-family: proxima-nova, sans-serif
+                border: none
+                border-radius: 3px
+                padding: 10px 0
+                color: white
+                font-size: 14px
+                letter-spacing: 0.1px 
+                font-weight: 700
