@@ -300,5 +300,21 @@ header {
       }
     }
   }
+
+  .requests {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 48px;
+    background: #E8F1F2;
+    padding: 16px 24px;
+    border-radius: 5px;
+    p {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 30px;
+      margin-bottom: 0px;
+    }
+  }
 }
 
