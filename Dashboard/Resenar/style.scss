@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* -------------------------*/
+/* ------ Variables -------*/
+/* ------------------------*/
+$primary: #17A0B4;
+$primaryDark:#178596 ;
+$light: #E8F1F2;
+$primaryRed: #A9170E;
+$backgroundColor: #EFF3F4;
+
+$form-range-thumb-bg: $primary;
+/* ----------------------*/
+/* ------ GENERAL -------*/
+/* ---------------------*/
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #0B424A;
+    &:hover {
+        color: #0B424A;
+    }
+}
+
+
+input {
+  width: 100%;
+  position: relative;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid $light;
+  &:focus-visible {
+    outline-color: $primaryDark;
+  }
+}
+
+.form-check-input {
+  padding: 8px;
+  &:checked {
+    background-color: $primary;
+    border-color: $primary ;
+  }
+}
+.btn {
+    &:focus {
+        box-shadow: none;
+    }
+    
+}
+.default-button {
+  background: $primary;
+  padding: 10px 24px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  border-radius: 3px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
+  transition: background ease-out 300ms;
+  &:hover {
+    background:  #68C1CE;
+  }
+  &:active {
+    background: #128090;
+  }
+  &.disabled {
+    background: #D2E0E2;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+.default-outline-button {
+    background: none;
+    border: 2px solid $primary;
+    color: $primary;
+    border-radius: 3px;
+    padding: 10px 24px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+    transition: all ease-out 300ms;
+    &:hover {
+        border-color: lighten($primary, 15%);
+        color: lighten($primary, 15%);
+    }
+}
+
+.clear-button {
+    background: none;
+    display: flex;
+    gap: 10px;
+    border: none;
+    align-items: center;
+    padding: 10px 24px;
+    transition: all ease-out 300ms;
+    &:hover {
+        color: lighten(black, 30%);
+    }
+}
+
+.kebab-btn {
+  border: none;
+  height: 100%;
+  font-size: 25px;
+  background: none;
+
+  i {
+    color: #C4C4C4;
+  }
+
+  &:hover {
+    i {
+        color: #676767;
+    }
+  }
+}
+
+/* -------------------*/
+/* ----- HEADER ------*/
+/* -------------------*/
+
+header {
+  height: 73px;
+  width: 100%;
+  padding-bottom: 0;
+}
+
+.header-container {
+  flex-direction: row;
+}
+
+/* ----- Left-side Header ------*/
+
+.left-side-header {
+  padding-left: 19px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  color: black;
+  background-color: #17A0B4;
+  background-color: rgba(23, 160, 180, 0.2);
+  height: 100%;
+
+  p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .fa-chart-line {
+    color: #17A0B4;
+    font-size: 24px;
+  }
+  
+}
+
+
+/* ----- Right-side header ------*/
+
+.user {
+  padding: 0px;
+  background-color: rgba(23, 160, 180, 0.2);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+  a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+.username {
+  color: #17A0B4;
+  font-weight: 500;
+  line-height: 19.49px;
+  letter-spacing: 0.1px;
+  margin: 0;
+}
+
+.user-profile-pic {
+  border-radius: 10px;
+  border: 1px solid #17A0B4;
+  width: 53px;
+  height: auto;
+  object-fit: cover;
+}
+
+.download {
+  background: url("./download.png");
+}
+
+/* ------- Left-side navigation -------*/
+
+// Navigation links
+.selections {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $backgroundColor;
+  height: calc(100vh - 73px);
+  padding: 0;
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    margin-top: 56px;
+  }
+  .page-link-item {
+    width: 100%;
+    padding: 10px 30px;
+    transition: background ease-out 300ms;
+    &:hover {
+        background: $light;
+    }
+    &.active {
+        background: #BAE9F0;
+        font-weight: 600;
+      }
+  }
+ 
+}
+
+.logout .btn {
+  background: none;
+  color: #303133;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+
+  &:hover {
+    color: #6c6e72;
+  }
+}
+
+
+
+/* ---------------------------*/
+/* ------- MAIN CONTENT-------*/
+/* ----------------------------*/
+
+
+// Filters
+.filters {
+  display: flex;
+  flex-direction: column;
+  background-color: #FBFDFF;
+  height: calc(100vh - 73px);
+  padding: 0;
+}
+
+.title-and-export {
+  display: flex;
+  justify-content: space-between;
+  padding: 56px 30px;
+  background-color: #FAFAFA;
+
+  .title {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+.search-and-filters {
+  display: flex;
+  padding: 28px 30px 0;
+  align-items: center;
+  gap: 24px;
+
+  input {
+    height: 44px;
+    font-size: 16px;
+  }
+
+  .default-button {
+    align-self: flex-end;
+  }
+  .last-used-from, .last-used-too {
+    position: relative;
+  } 
+  .rest-värde {
+    .value-slider {
+        width: 100%;
+        background-color: white;
+        border-radius: 5px;
+        display: none;
+        border: 1px solid $light;
+        padding: 10px 10px 5px;
+        .form-range {
+            border: none;
+        }
+        .range-value-labels {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+        }
+    }
+  }
+
+  .selector {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    align-items: center;
+    background: white;
+    border-radius: 5px;
+  }
+  .dropdown-menu-selector {
+    background-color: white;
+    width: 100%;
+  }
+}
+
+.kort-nummer {
+  flex-grow: 2;
+}
+
+.rest-värde {
+  flex-grow: 1;
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  bottom: 13px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.results {
+  display: flex;
+  margin: 40px 30px;
+
+  /* justify-content: center;
+  align-items: center; */
+  height: calc(100vh - 150px - 158px - 73px);
+//   background: #EFF3F4;
+  border-radius: 10px;
+}
+
+/* Results Styling*/
+
+.display-results {
+    width: 100%;
+    padding: 0;
+}
+
+.column-titles {
+  width: 98%;
+  display: flex;
+  padding: 8px 10px;
+  background-color: #FBFDFF;
+
+  .form-check p{
+    margin-left: 50px;
+    & i {
+        margin-left: 8px;
+        cursor: pointer;
+    }
+  }
+}
+
+/* Radio buttions  */
+
+.check-all-label {
+  margin-left: 50px;
+
+  i {
+    margin-left: 12px;
+  }
+}
+
+/* Card  */
+
+.cards {
+    // overflow-y: scroll;
+    max-height: 90%;
+    min-height: 250px;
+// CUSTOM SCROLL BAR
+&::-webkit-scrollbar {
+    width: 20px;
+}
+
+
+&::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+
+&::-webkit-scrollbar-thumb {
+    background-color:  rgba(73, 167, 181, 0.405);;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+    
+}
+
+
+&::-webkit-scrollbar-thumb:hover {
+    background-color: #17A0B4;
+}
+
+
+}
+
+.card-info {
+  display: flex;
+  padding: 16px 10px;
+  align-items: center;
+  &:nth-child(odd) {
+    background: $backgroundColor;
+  }
+  p {
+    margin: 0;
+  }
+  .card-number {
+    margin-left: 50px;
+  }
+}
+
+.status-and-options-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-info .dropdown-menu {
+  background-color: $light;
+  border: 1px solid #C8D4D6;
+  color: black;
+  width: 230px;
+}
+
+.status {
+  color: #17A0B4;
+}
+
+/* Drop down options  */
+
+#radera a {
+  color: #A9170E;
+}
+
+
+//--------------------------------
+// MODAL STYLES
+//--------------------------------
+
+// Export Modal 
+.export-modal {
+    .modal-dialog {
+        max-width: 600px;
+    }
+    .choose-export-title-and-rows {
+        display: flex;
+        gap: 30px;
+        padding: 38px 10px 10px;
+        .rows-to-export {
+            color: #607B7C;
+        }
+    }
+    .modal-body {
+        .export-check-all {
+            padding-left: 54px;
+        }
+        .export-card-number, .export-last-used, .export-rest-value {
+            padding-left: 78px;
+        }
+    }
+    .modal-footer {
+        padding-top: 52px;
+        padding-left: 38px;
+        justify-content: flex-start;
+        border-top: none;
+    }
+}
+
+
+// Spärra kort Modal
+.lock-card-modal, .discount-modal, .display-discount-modal {
+    .modal-dialog {
+        max-width: 700px;
+    }
+    .modal-header {
+        border-bottom: none;
+    }
+    .modal-content {
+        .modal-title {
+            font-size: 28px;
+            text-transform: uppercase;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .modal-info{
+            text-align: center;
+            margin-bottom: 48px;
+            color: #49454F;
+            font-weight: 300;
+        }
+        background: $backgroundColor;
+        #lock-card-comment {
+            width: 100%;
+            resize: none;
+            background-color: #D9E6E8;
+            border: none;
+            border-radius: 20px;
+            padding: 15px;
+        }
+    }
+    .modal-body {
+        padding: 38px 42.5px 32px;
+    }
+    .modal-footer {
+        justify-content: center;
+        border: none;
+    }
+    .disable-card-btn {
+        background-color: $primaryRed;
+    }
+}
+
+// Discount modal
+.display-discount-modal {
+    .discount-code-field {
+        background-color: $light;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 10px;
+        border-radius: 3px;
+
+        .copy-code-icon {
+            cursor: pointer;
+        }
+    }
+
+}
+
+// Card log Modal
+.card-log {
+    .modal-dialog {
+        max-width: 900px;
+    }
+    .modal-content {
+        background: $backgroundColor;
+    }
+    .modal-body {
+        padding: 0 24px 50px;
+    }
+    .modal-header, .modal-footer {
+        border: none;
+    }
+    .modal-title {
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .card-number {
+        font-size: 22px;
+        font-weight: 400;
+    }
+
+    // Card log column titles
+    .column-titles-log {
+        display: flex;
+        
+    }
+    //Card Logs
+    .card-log {
+        display: flex;
+        padding: 16px 8px;
+        border-radius: 3px;
+        p {
+            margin: 0;
+        }
+        &:nth-of-type(odd) {
+            background-color: $light;
+        }
+    }
+}

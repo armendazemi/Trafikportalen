@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Fontawesome (icons) -->
+    <script src="https://kit.fontawesome.com/6c1e67d703.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="container-fluid">
+        <div class="row h-100">
+        <div class="left-side-header col-3">
+            <i class="fa-regular fa-chart-line"></i>
+            <p>Statistik</p>
+            <a href="#">
+                <i class="fa-regular fa-chevron-down"></i>
+            </a>
+            
+        </div>
+        <div class="user col-9">
+            <a href="#">
+                <p class="username">Emmy Nilson</p>
+                <img src="../../resources/user-prof.png" alt="" class="user-profile-pic">
+            </a>
+            
+        </div>
+    </div>
+    </header>
+
+    <div class="main container-fluid">
+        <div class="row">
+            <!-- PAGE LINKS LEFT SIDE -->
+            <div class="selections col-3">
+                <div class="links">
+                  <a href="#" class="page-link-item"><i class="fa-regular fa-user-gear"></i> Administratörer</a>
+                  <a href="#" class="page-link-item"><i class="fa-regular fa-grid-2"></i>Avdelningar</a>
+                  <a href="#" class="page-link-item"><i class="fa-regular fa-user-group"></i>Resenärer</a>
+                  <a href="#" class="page-link-item"><i class="fa-regular fa-ticket"></i>Beställ biljett</a>
+                  <a href="#" class="page-link-item"><i class="fa-regular fa-bell"></i>Evenemang</a>
+                  <a href="#" class="page-link-item"><i class="fa-regular fa-chart-simple"></i>Statistik & Rapporter</a>
+                </div>
+                <div class="logout">
+                    <button type="button" class="clear-button"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logga ut</button>
+                </div>
+            </div>
+
+            <!-- KORT DATA (MAIN MIDDLE CONTAINER)  -->
+            <div class="filters col-9">
+                <div class="title-and-export">
+                    <div class="title-and-sub">
+                        <h1 class="title">Resenär</h1>
+                        <p>Här kan du lägga till, redigera och ta bort resenärer</p>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" class="default-button"><i class="fa-solid fa-plus"></i>Avdelning</button>
+                        <button type="button" class="default-button"><i class="fa-solid fa-plus"></i>Avdelning</button>
+
+                    </div>
+                </div>
+
+                <!-- FILTERS -->
+                <div class="search-and-filters">
+                    <div class="kort-nummer">
+                        <p>Kortnummer</p>
+                        <input type="text" name="" id="" placeholder="Skriv kortnummer">
+                    </div>
+                    <div class="rest-värde">
+                        <p>Restvärde</p>
+                        <div class="dropdown">
+                            <a class="selector toggle-value-slider" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                Fyll i värde<i class="fa-regular fa-chevron-down"></i>
+                              </a>
+                            <div class="value-slider dropdown-menu dropdown-menu-selector" aria-labelledby="dropdownMenuButton1" style="position: absolute; display: none;">
+                                <input type="range" class="form-range" min="0" max="200" id="customRange1" >
+                                <div class="range-value-labels">
+                                    <p>1</p>
+                                    <p>5000</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="last-used-from">
+                        <p>Från</p>
+                        <input type="date" name="" id="date-from" placeholder="Från" >
+                    </div>
+                    <div class="last-used-too">
+                        <p>Till</p>
+                        <input type="date" name="" id="date-to" placeholder="Till">
+                    </div>
+                    <button type="button" class="default-button filter-btn">Filtrera</button>
+                </div>
+
+                <!-- COLUMN NAMES FOR CARDS -->
+                <div class="results">
+                    <div class="display-results">
+                            <div class="column-titles">
+                                <div class="form-check col-4">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkAll">
+                                    <p> Kort<i class="fa-light fa-arrow-up-arrow-down"></i></p>
+                                </div>
+                                <p class="col-2">Senast använd</p>
+                                <p class="col-2">Restvärde</p>
+                                <p class="col-4">Status</p>
+                            </div>
+                    <!-- -------------- CARDS -------------- -->
+                            <div class="cards">
+                                <div class="card-info">
+                                    <div class="form-check col-4">
+                                        <input class="form-check-input card-check-btn" type="checkbox" value="" id="test">
+                                        <p class="card-number"> 5555 5555 5555 5555</p>
+                                    </div>
+                                    <p class="col-2">2022-02-01</p>
+                                    <p class="col-2">1256 SEK</p>
+                                    <!-- Status and 3 dot button container  -->
+                                    <div class="status-and-options-button col-4">
+                                        <p class="col-4 status">Aktiv</p>
+                                        <div class="btn-group dropstart">
+                                            <button type="button" class="kebab-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            </button>
+
+                                            <!-- Dropdown menu links -->
+                                            <ul class="dropdown-menu">
+                                                <li data-bs-toggle="modal" data-bs-target="#lockCardModal"><a class="dropdown-item">Spärra</a></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item" href="#">Återbetala</a></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li data-bs-toggle="modal" data-bs-target="#discountModal"><a class="dropdown-item" href="#">Skapa värdekod</a></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li data-bs-toggle="modal" data-bs-target="#cardLog"><a class="dropdown-item" href="#">Logg</a></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li id="radera"><a class="dropdown-item" href="#">Radera</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>  
+                                </div>
+                        </div>
+                        <!-- -------------- CARDS  END-------------- -->
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <!------------------->
+        <!------ MODALS ----->
+        <!------------------->
+
+<!-- Export Modal -->
+<div class="modal fade export-modal" id="exportModal" tabindex="-1" aria-labelledby="exportModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Exportera</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="choose-export-title-and-rows">
+                <p>Välj värden du vill hämta ut</p>
+                <p class="rows-to-export">100 rader exporteras</p>
+            </div>
+            <div class="form-check export-check-all">
+                <input class="form-check-input" type="checkbox" value="" id="exportAll">
+                <p>Välj alla</p>
+            </div>
+            <div class="form-check export-card-number">
+                <input class="form-check-input export-option" type="checkbox" value="" id="exportCardNumber">
+                <p>Kortnummer</p>
+            </div>
+            <div class="form-check export-last-used">
+                <input class="form-check-input export-option" type="checkbox" value="" id="exportLastUsed">
+                <p>Senast använda</p>
+            </div>
+            <div class="form-check export-rest-value">
+                <input class="form-check-input export-option" type="checkbox" value="" id="exportRestValue">
+                <p>Restvärde</p>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="default-button">LADDA NER CVS FIL</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<!-- SPÄRRA KORT MODAL -->
+<div class="modal fade lock-card-modal" id="lockCardModal" tabindex="-1" aria-labelledby="lockCardModal" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h5 class="modal-title">Spärra kortet</h5>
+            <p class="modal-info">A dialog is a type of modal windo that appears in frnt of the app content to prvide critical information, or prompt for a decision to be made.</p>
+            <div class="add-comment">
+                <p>Skriv en kommentar</p>
+                <textarea id="lock-card-comment" name="lock-card-comment" rows="4" cols="50"></textarea>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="default-outline-button" data-bs-dismiss="modal">Avbryt</button>
+            <button class="default-button disable-card-btn">SPÄRRA KORTET</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<!-- SKAPA VÄRDEKOD 1/2 -->
+<div class="modal fade discount-modal" id="discountModal" tabindex="-1" aria-labelledby="discountModal" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h5 class="modal-title">ÄR DU SÄKER PÅ ATT DU VILL SKAPA EN VÄRDEKOD</h5>
+            <p class="modal-info">A dialog is a type of modal windo that appears in frnt of the app content to prvide critical information, or prompt for a decision to be made.</p>
+    
+        </div>
+        <div class="modal-footer">
+            <button class="default-outline-button" data-bs-dismiss="modal">NEJ, AVBRYT</button>
+            <button class="default-button create-discount-btn" data-bs-toggle="modal" data-bs-target="#displayDiscountModal" data-bs-dismiss="modal">JA, SKAPA VÄRDEKOD</button>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- VÄRDEKOD PRESENTATION 2/2 -->
+<div class="modal fade display-discount-modal" id="displayDiscountModal" tabindex="-1" aria-labelledby="displayDiscountModal" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h5 class="modal-title">VÄRDEKOD: </h5>
+            <p class="discount-code-field">sx250sek <i class="fa-light fa-copy copy-code-icon"></i></p>
+        </div>
+        <div class="modal-footer">
+            <button class="default-button create-discount-btn" data-bs-dismiss="modal">STÄNG</button>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- KORT LOGG -->
+<div class="modal fade card-log" id="cardLog" tabindex="-1" aria-labelledby="cardLog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h5 class="modal-title">KORTLOGG </h5>
+            <p class="card-number">KORT: 5555 5555 5555 5555</p>
+
+            <div class="column-titles-log">
+                <p class="col-2">Datum</p>
+                <p class="col-2">Händelse</p>
+                <p class="col-2">Användare</p>
+                <p class="col-6">Kommentar</p>
+            </div>
+            <div class="card-logs">
+                <div class="card-log">
+                    <p class="col-2 log-date">2022-01-01</p>
+                    <p class="col-2 log-status">Spärrat Kort</p>
+                    <p class="col-2 log-user">EN</p>
+                    <p class="col-6 log-comment">Valfri text inskriven från användaren</p>
+                </div>
+                <div class="card-log">
+                    <p class="col-2 log-date">2022-01-01</p>
+                    <p class="col-2 log-status">Spärrat Kort</p>
+                    <p class="col-2 log-user">EN</p>
+                    <p class="col-6 log-comment">Valfri text inskriven från användaren</p>
+                </div>
+                <div class="card-log">
+                    <p class="col-2 log-date">2022-01-01</p>
+                    <p class="col-2 log-status">Spärrat Kort</p>
+                    <p class="col-2 log-user">EN</p>
+                    <p class="col-6 log-comment">Valfri text inskriven från användaren</p>
+                </div>
+                <div class="card-log">
+                    <p class="col-2 log-date">2022-01-01</p>
+                    <p class="col-2 log-status">Spärrat Kort</p>
+                    <p class="col-2 log-user">EN</p>
+                    <p class="col-6 log-comment">Valfri text inskriven från användaren</p>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="module" src="/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</html>

@@ -157,9 +157,8 @@ header {
 }
 
 .user-profile-pic {
-  border-radius: 10px;
-  border: 1px solid #17A0B4;
-  width: 53px;
+  border-radius: 100%;
+  width: 48px;
   height: auto;
   object-fit: cover;
 }
@@ -271,10 +270,25 @@ header {
       border-radius: 8px;
       border: none;
       cursor: pointer;
-      i {
+      transition: all ease-out 300ms;
+      &:hover {
+         background-color: $primary;
+         color: white;
+         .card-title {
+           color: white;
+         }
+          .card-subtitle {
+            color: white;
+          }
+          .fa-regular {
+            color: white;
+          }
+      }
+      .fa-regular {
         font-size: 32px;
         color: $primary;
         margin-bottom: 16px;
+        transition: all ease-out 300ms;
       }
       .card-title{
         font-size: 18px;
@@ -282,6 +296,7 @@ header {
         font-weight: 600;
         margin-bottom: 16px;
         color: #0B424A;
+        transition: all ease-out 300ms;
       }
     }
   }
