@@ -272,6 +272,7 @@ header {
   background: #E8F1F2;
   padding: 16px 24px;
   border-radius: 5px;
+  cursor: pointer;
 }
 .main-content .requests p {
   font-size: 22px;
