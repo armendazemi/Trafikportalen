@@ -414,26 +414,30 @@ header {
   color: #A9170E;
 }
 
-.status-and-options-button {
+.no-reuqests {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  background: #F1F9FA;
+  margin: 0 30px;
 }
-
-.card-info .dropdown-menu {
-  background-color: #E8F1F2;
-  border: 1px solid #C8D4D6;
-  color: black;
-  width: 230px;
+.no-reuqests .icon-and-text {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  font-weight: 400;
+  font-style: italic;
 }
-
-.status {
+.no-reuqests .icon-and-text p {
+  font-size: 16px;
+  margin: 0;
+}
+.no-reuqests .icon-and-text i {
+  font-size: 24px;
   color: #17A0B4;
-}
-
-/* Drop down options  */
-#radera a {
-  color: #A9170E;
+  border: 10px solid white;
+  border-radius: 100%;
+  padding: 5px;
 }
 
 .accept-modal .modal-dialog,
@@ -469,6 +473,7 @@ header {
   border: none;
   display: flex;
   gap: 24px;
+  font-size: 14px;
 }
 .accept-modal .modal-footer .reject-button,
 .reject-modal .modal-footer .reject-button {

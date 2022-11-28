@@ -470,29 +470,33 @@ header {
   }
 }
 
-.status-and-options-button {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.no-reuqests {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding: 16px 0;
+    background: #F1F9FA;
+    margin: 0 30px;
+    .icon-and-text {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        
+        font-weight: 400;
+        font-style: italic;
+        p {
+            font-size: 16px;
+            margin: 0;
+        }
+        i {
+            font-size: 24px;
+            color: $primary;
+            border: 10px solid white;
+            border-radius: 100%;
+            padding: 5px;
+        }
+    }
 }
-
-.card-info .dropdown-menu {
-  background-color: $light;
-  border: 1px solid #C8D4D6;
-  color: black;
-  width: 230px;
-}
-
-.status {
-  color: #17A0B4;
-}
-
-/* Drop down options  */
-
-#radera a {
-  color: #A9170E;
-}
-
 
 //--------------------------------
 // MODAL STYLES
@@ -527,7 +531,7 @@ header {
         border: none;
         display: flex;
         gap: 24px;
-        font-size: 14px
+        font-size: 14px;
 
         .reject-button {
             background: #A9170E;
