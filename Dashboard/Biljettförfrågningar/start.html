@@ -105,16 +105,28 @@
 <div class="modal fade accept-modal" id="acceptModal" tabindex="-1" aria-labelledby="acceptModal" aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
             <div class="modal-body">
                 <h5 class="modal-title">Är du säker på att du vill acceptera?</h5>
             </div>
 
             <div class="modal-footer">
                 <button class="default-outline-button" data-bs-dismiss="modal">TILLBAKA</button>
-                <button class="default-button "  data-bs-dismiss="modal">ACCEPTERA</button>
+                <button class="default-button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#sentModal">ACCEPTERA</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade sent-modal" id="sentModal" tabindex="-1" aria-labelledby="acceptModal" aria-hidden="true" >
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h5 class="modal-title">Biljetten är skickad till resenär</h5>
+            </div>
+
+            <div class="modal-footer">
+                <button class="default-button"  data-bs-dismiss="modal">Stäng</button>
             </div>
         </div>
     </div>
@@ -125,9 +137,6 @@
 <div class="modal fade reject-modal" id="rejectModal" tabindex="-1" aria-labelledby="rejectModal" aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
             <div class="modal-body">
                 <h5 class="modal-title">Är du säker på att du vill neka?</h5>
         
