@@ -227,7 +227,7 @@ header {
 .main-content .cards {
   margin-top: 48px;
   display: flex;
-  gap: 30px;
+  justify-content: space-evenly;
 }
 .main-content .cards .card {
   padding: 32px;
