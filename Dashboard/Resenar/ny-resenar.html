@@ -14,7 +14,7 @@
 <body>
     <header class="container-fluid">
         <div class="row h-100">
-        <div class="left-side-header col-3">
+        <div class="left-side-header col-2">
             <img src="../../resources/portal-logo-blue.svg" alt="">
             <p>Företag</p>
             <a href="#">
@@ -22,7 +22,7 @@
             </a>
             
         </div>
-        <div class="user col-9">
+        <div class="user col-10">
             <a href="#">
                 <p class="username">Emmy Nilson</p>
                 <img src="../../resources/user-prof.png" alt="" class="user-profile-pic">
@@ -55,14 +55,14 @@
                 <div class="title-and-export">
                     <div class="title-and-sub">
                         <h1 class="title">Ny resenär</h1>
-                        <a href="#" class="back"><i class="fa-solid fa-arrow-left"></i> Tillbaka till biljetter</a>
+                        <a href="#" class="back"><i class="fa-solid fa-arrow-left"></i> Tillbaka till resenärer</a>
                     </div>
                 </div>
                 <div class="results">
-                    <div class="form-new col-5">
+                    <div class="form-new col-6">
                          <div class="instructions">
                             <p class="heading">Fyll i den nya resenärens uppgifter</p>
-                            <p>När du skapat en resenär skickas det ett mail till mottagaren så 
+                            <p class="sub-heading">När du skapat en resenär skickas det ett mail till mottagaren så 
                                 att denne kan skapa ett konot och beställa sina egna biljetter</p>
                          </div>
                          <div class="input-fields">
@@ -89,17 +89,45 @@
                             </div>
                             <div class="input-field">
                                 <div class="text">
-                                    <p>Förnamn</p>
+                                    <p>Mobilnummer</p>
                                     <p class="sub">(Obligatoriskt)</p>
                                 </div>
-                                <input type="text"  placeholder="Förnamn">
+                                <input type="text"  placeholder="0701234567">
                             </div>
                             <div class="input-field">
                                 <div class="text">
-                                    <p>Förnamn</p>
+                                    <p>Personnummer</p>
                                     <p class="sub">(Obligatoriskt)</p>
                                 </div>
-                                <input type="text"  placeholder="Förnamn">
+                                <input type="text"  placeholder="xxxxxx-xxxx">
+                            </div>
+                            <div class="input-field department">
+                                <div class="text">
+                                    <p>Avdelning</p>
+                                    <p class="sub">(Obligatoriskt)</p>
+                                </div>
+                                <i class="fa-regular fa-magnifying-glass search-icon"></i>
+                                <input type="text" class="col-5" placeholder="Sök på avdelning">
+                            </div>
+                            <div class="input-field">
+                                <div class="text">
+                                    <p>Ska resenären ha tillgång till Tjänsterresor?</p>
+                                </div>
+                              <div class="radio-buttons">
+                                <div class="yes-button">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">Ja</label>
+                                </div>
+                               <div class="no-button">
+                                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                   <label class="form-check-label" for="flexRadioDefault1">
+                                       Nej
+                                   </label>
+                               </div>
+                              </div>
+                            </div>
+                            <div class="create-button">
+                                <button class="default-button"> Skapa resenär</button>
                             </div>
                          </div>
                     </div>

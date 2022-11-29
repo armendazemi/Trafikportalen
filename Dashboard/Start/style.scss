@@ -1,227 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/* -------------------------*/
-/* ------ Variables -------*/
-/* ------------------------*/
-$primary: #17A0B4;
-$primaryDark:#178596 ;
-$light: #E8F1F2;
-$primaryRed: #A9170E;
-$backgroundColor: #EFF3F4;
-
-$form-range-thumb-bg: $primary;
-/* ----------------------*/
-/* ------ GENERAL -------*/
-/* ---------------------*/
-
-* {
-  font-family: 'Poppins', sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: #0B424A;
-    &:hover {
-        color: #0B424A;
-    }
-}
-
-.btn {
-    &:focus {
-        box-shadow: none;
-    }
-    
-}
-.default-button {
-  background: $primary;
-  padding: 10px 24px;
-  border: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
-  height: 44px;
-  border-radius: 3px;
-  color: white;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.1px;
-  text-transform: uppercase;
-  transition: background ease-out 300ms;
-  &:hover {
-    background:  #68C1CE;
-  }
-  &:active {
-    background: #128090;
-  }
-  &.disabled {
-    background: #D2E0E2;
-    cursor: default;
-    pointer-events: none;
-  }
-}
-
-.default-outline-button {
-    background: none;
-    border: 2px solid $primary;
-    color: $primary;
-    border-radius: 3px;
-    padding: 10px 24px;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.1px;
-    transition: all ease-out 300ms;
-    &:hover {
-        border-color: lighten($primary, 15%);
-        color: lighten($primary, 15%);
-    }
-}
-
-.clear-button {
-    background: none;
-    display: flex;
-    gap: 10px;
-    border: none;
-    align-items: center;
-    padding: 10px 24px;
-    transition: all ease-out 300ms;
-    &:hover {
-        color: lighten(black, 30%);
-    }
-}
-
-
-/* -------------------*/
-/* ----- HEADER ------*/
-/* -------------------*/
-
-header {
-  height: 73px;
-  width: 100%;
-  padding-bottom: 0;
-}
-
-.header-container {
-  flex-direction: row;
-}
-
-/* ----- Left-side Header ------*/
-
-.left-side-header {
-  padding-left: 19px;
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  color: black;
-  background-color: #17A0B4;
-  background-color: rgba(23, 160, 180, 0.2);
-  height: 100%;
-
-  p {
-    margin: 0;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-  }
-
-  .fa-chart-line {
-    color: #17A0B4;
-    font-size: 24px;
-  }
-  
-}
-
-
-/* ----- Right-side header ------*/
-
-.user {
-  padding: 0px;
-  background-color: rgba(23, 160, 180, 0.2);
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding-right: 30px;
-  a {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-}
-
-.username {
-  color: #17A0B4;
-  font-weight: 500;
-  line-height: 19.49px;
-  letter-spacing: 0.1px;
-  margin: 0;
-}
-
-.user-profile-pic {
-  border-radius: 100%;
-  width: 48px;
-  height: auto;
-  object-fit: cover;
-}
-
-
-
-/* ------- Left-side navigation -------*/
-
-// Navigation links
-.selections {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: $backgroundColor;
-  height: calc(100vh - 73px);
-  padding: 0;
-  padding-bottom: 48px;
-  .links {
-    display: flex;
-    flex-direction: column;
-    gap: 36px;
-    margin-top: 56px;
-  }
-  .page-link-item {
-    width: 100%;
-    padding: 10px 30px;
-    transition: background ease-out 300ms;
-    color: #354A4B;
-    &:hover {
-        background: $light;
-    }
-    &.active {
-        background: #BAE9F0;
-        font-weight: 600;
-      }
-      i{
-        font-size: 21px;
-        margin-right: 13px
-      }
-  }
-
-  .bottom-links {
-    button{
-      color:#303133 ;
-      i{
-        font-size: 21px;
-        margin-right: 13px
-      }
-    }
-  }
- 
-}
-
-
-
-
+@import "../../resources/stylesheets/basic.scss";
 
 /* ---------------------------*/
 /* ------- MAIN CONTENT-------*/
 /* ----------------------------*/
-
-
 .main-content {
+  margin-top: 73px;
   display: flex;
   flex-direction: column;
   padding: 56px 30px;
@@ -248,7 +31,7 @@ header {
     p {
       margin: 0;
       margin-right: 8px; 
-      color: #354A4B;
+      color: $primaryTextColor;
       font-size: 14px;
       font-weight: 700;
       letter-spacing: 0.1px;
@@ -264,6 +47,7 @@ header {
     margin-top: 48px;
     display: flex;
     justify-content: space-evenly;
+    gap: 24px;
     .card {
       padding: 32px;
       box-shadow: 0px 2px 4px rgba(16, 24, 40, 0.08);
@@ -295,7 +79,7 @@ header {
         line-height: 22px;
         font-weight: 600;
         margin-bottom: 16px;
-        color: #0B424A;
+        color: $primary900;
         transition: all ease-out 300ms;
       }
     }

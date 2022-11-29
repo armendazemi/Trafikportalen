@@ -1,7 +1,6 @@
+@import "../resources/stylesheets/basic.scss"
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
 @import url("https://use.typekit.net/sxz2efx.css")
-
-$primaryText: #2A3031
 
 // Base styles
 *
@@ -27,7 +26,7 @@ a
         position: relative
         height: 660px
         max-width: 530px
-        background: url(../resources/buss-bild.png) 
+        background: url(../resources/images/buss-bild.png) 
         background-repeat: no-repeat
         background-size: object-fit
         border-radius: 10px 0 0 10px
@@ -58,22 +57,32 @@ a
                 justify-content: space-between
                 gap: 80px
                 padding: 40px
-                border: 1px solid #E5E5E5
+                border: 2px solid $primary600
                 border-radius: 10px
-                background-color: #F7FBFC
                 cursor: pointer
-                color: $primaryText
+                color: $primary600
+                transition: background 0.3s ease-in-out
+                &:hover
+                    background: $primary600
+                    color: white
                 .option-text
                     margin: 0
                     font-weight: 600
                     font-size: 18px
                     line-height: 21.6px
+            i
+                font-size: 32px
+                
             
 //------------------LOGIN BANKID------------------//
 .login-bank-right, 
 .login-epost-right
     .back-button
         padding: 30px 0 0 25px
+        font-size: 32px
+        a
+            color: $primary600
+            font-size: 32px
     .login-details
         display: flex
         flex-direction: column
@@ -85,7 +94,7 @@ a
             font-size: 24px
             font-weight: 500
             line-height: 28.8px
-            color: $primaryText
+            color: $primary600
         .input-and-text
             display: flex
             flex-direction: column
@@ -96,7 +105,7 @@ a
                 display: flex
                 justify-content: space-between
                 padding-bottom: 4px
-                color: $primaryText
+                color: $primary600
                 & > p
                     margin: 0
                 .personnummer
@@ -110,23 +119,9 @@ a
                     line-height: 14.4px
                     letter-spacing: 0.25px
                     color: #909194 
-            input
-                border: 1px solid #E8F1F2
-                padding: 7px 10px
-                border-radius: 3px
-                &::placeholder
-                    color: #C8D4D6
             button
                 margin-top: 34px
-                background-color: #17A0B4
-                font-family: proxima-nova, sans-serif
-                border: none
-                border-radius: 3px
-                padding: 10px 0
-                color: white
-                font-size: 14px
-                letter-spacing: 0.1px 
-                font-weight: 700
+             
 
 
 //------------------LOGIN EPOST------------------//
