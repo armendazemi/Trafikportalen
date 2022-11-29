@@ -25,19 +25,6 @@
     line-height: 38px;
     font-weight: 600; 
   }
-  .back {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-    color: $secondary400;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    transition: color 300ms ease-out;
-    &:hover {
-      color: $secondary800;
-    }
-  }
 }
 .pending-title {
     margin-left: 30px;

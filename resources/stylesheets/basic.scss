@@ -16,6 +16,7 @@ $primary600: #17A0B4;
 $primary500: #68C1CE;
 
 $secondary800: #354A4B;
+$secondary600: #526667;
 $secondary400: #829B9C;
 
 $form-range-thumb-bg: $primary;
@@ -128,6 +129,20 @@ input {
     &:hover {
         color: lighten(black, 30%);
     }
+}
+
+.back {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $secondary400;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  transition: color 300ms ease-out;
+  &:hover {
+    color: $secondary800;
+  }
 }
 
 /* -------------------*/
@@ -252,5 +267,49 @@ header {
       }
     }
   }
- 
+}
+
+//--------------------------------
+// MODAL STYLES
+//--------------------------------
+ .accept-modal,
+ .reject-modal {
+    .modal-dialog {
+        max-width: 700px;
+    }
+    .modal-header {
+        border-bottom: none;
+    }
+    .modal-content {
+        background: $backgroundColor;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        padding-bottom: 96px;
+        .modal-title {
+            font-size: 28px;
+            text-transform: uppercase;
+            font-weight: 600;
+            text-align: center;
+        }
+        .modal-body {
+            padding: 0;
+        }
+    }
+    
+    .modal-footer {
+        justify-content: center;
+        border: none;
+        display: flex;
+        gap: 24px;
+        font-size: 14px;
+
+        .reject-button {
+            background: $primaryRed;
+            transition: background 300ms ease-out;
+            &:hover {
+                background: $primaryRedHover;
+            }
+        }
+    }
 }

@@ -238,3 +238,66 @@
         }
     }
 }
+
+//--------------------------------
+// MODAL STYLES
+//--------------------------------
+.created-modal {
+   .modal-dialog {
+       max-width: 700px;
+   }
+   .modal-header {
+       border-bottom: none;
+   }
+   .modal-content {
+       background: $backgroundColor;
+       display: flex;
+       flex-direction: column;
+       gap: 48px;
+       padding: 96px;
+      justify-content: center;
+       .modal-body {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 0;
+          i {
+            font-size: 20px;
+            color: $primary600;
+            background: #F1F9FA;
+            border: 8px solid #F8FCFD;
+            padding: 10px;
+            border-radius: 28px;
+            margin-bottom: 32px;
+          }
+          .modal-title {
+            font-size: 28px;
+            font-weight: 600;
+            text-align: center;
+            color: $primary900;
+            margin-bottom: 24px;
+          }
+          p {
+            color: $secondary600;
+            text-align: center;
+          }
+       }
+   }
+   
+   .modal-footer {
+       justify-content: center;
+       border: none;
+       display: flex;
+       gap: 24px;
+       font-size: 14px;
+
+       .reject-button {
+           background: $primaryRed;
+           transition: background 300ms ease-out;
+           &:hover {
+               background: $primaryRedHover;
+           }
+       }
+   }
+}
