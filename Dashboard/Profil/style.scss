@@ -204,4 +204,16 @@
       }
     }
   }
+
+  // BILJETTER SECTION
+  .tickets {
+    .input {
+      input {
+        width: 100%;
+      }
+      label {
+        margin-bottom: 4px;
+      }
+    }
+  }
 }
