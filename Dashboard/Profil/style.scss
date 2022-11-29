@@ -20,6 +20,8 @@
     }
   }
 
+  // PERSONAL INFO SECTION 
+
   .user-information-wrapper {
     display: flex;
     flex-direction: column;
@@ -36,20 +38,21 @@
       padding: 48px;
     }
 
-    .personal {
-      .section-header {
-        .title {
-          color: $neutral800;
-          font-weight: 500;
-          margin-bottom: 8px;
-        }
-        .sub-title {
-          color: $secondary600;
-          font-weight: 400;
-          font-size: 14px;
-          margin: 0;
-        }
+    .section-header {
+      .title {
+        color: $neutral800;
+        font-weight: 500;
+        margin-bottom: 8px;
       }
+      .sub-title {
+        color: $secondary600;
+        font-weight: 400;
+        font-size: 14px;
+        margin: 0;
+      }
+    }
+
+    .personal {
       .input-group {
         gap: 24px 16px;
         .group{
@@ -81,6 +84,8 @@
           }
           .delete-button {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 8px;
             align-items: center;
             color: $alerts600;
@@ -124,7 +129,29 @@
         }
       }
     }
+  }
 
+  // COMPANY INFO SECTION 
 
+  .company {
+    .input-group {
+      gap: 24px;
+      .group {
+        width: 100%;
+      }
+      label {
+        margin-bottom: 4px;
+      }
+      .company-zipcode-city {
+        display: flex;
+        gap: 16px;
+        .zip{
+          flex: 1;
+        }
+        .city {
+          flex: 2;
+        }
+      }
+    }
   }
 }
