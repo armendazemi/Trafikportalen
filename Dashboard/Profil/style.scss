@@ -168,4 +168,40 @@
       }
     }
   }
+
+  // NOTIFCATIONS INFO SECTION
+  .notifications {
+    .departments-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      .column-email {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: -19px;
+        padding-right: 72px;
+        p {
+          color: $secondary400;
+          font-size: 12px;
+          font-weight: 400;
+          margin: 0;
+        }
+      }
+      .department {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        justify-content: space-between;
+        background: $primary50;
+        padding: 16px;  
+        .name {
+          margin: 0;
+        }
+        .buttons {
+          display: flex; 
+          gap: 24px;
+        }
+      }
+    }
+  }
 }
