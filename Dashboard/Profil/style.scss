@@ -29,6 +29,7 @@
     flex-direction: column;
     gap: 24px;
     margin: auto;
+    padding-bottom: 96px;
 
     .info-section {
       display: flex;
@@ -214,6 +215,38 @@
       label {
         margin-bottom: 4px;
       }
+    }
+  }
+
+  // BUTTONS SECTION
+  .buttons {
+    flex-direction: row !important;
+    justify-content: space-between;
+    gap: 16px;
+    .delete-button {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      align-items: center;
+      color: $alerts600;
+      cursor: pointer;
+      transition: all 300ms ease-out;
+      &:hover {
+        color: $primaryRedHover;
+      }
+      p {
+        margin: 0;
+      }
+    }
+    .undo-and-save {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .default-outline-button, .default-button {
+      text-transform:none !important;
     }
   }
 }
