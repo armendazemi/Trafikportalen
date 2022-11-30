@@ -247,19 +247,53 @@
 
             </div>
             <div class="buttons info-section">
-              <div class="delete-button">
+              <button class="delete-button" type="button"  data-bs-toggle="modal" data-bs-target="#deleteAdminModal">
                 <i class="fa-regular fa-trash-can"></i>
                 <p>Ta bort</p>
-              </div>
+              </button>
               <div class="undo-and-save">
                 <button class="default-outline-button">Ångra ändringar</button>
                 <button class="default-button">Spara ändringar</button>
               </div>
+
+              <!-- <button class="accept" type="button"  data-bs-toggle="modal" data-bs-target="#acceptModal"><i class="fa-regular fa-check"></i> Acceptera</button> -->
             </div>
           </div>
         </div>
       </div>
     </div>
 
+    <div class="modal fade delete-admin-modal" id="deleteAdminModal" tabindex="-1" aria-labelledby="deleteAdminModal" aria-hidden="true" data-bs-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-body">
+                <i class="fa-regular fa-circle-info info-icon"></i>
+                  <h5 class="modal-title">Vill du radera ditt konto?</h5>
+                  <p class="sub-title">Innan du raderar ditt konto behöver du föra över din behörighet som organisationsadministratör till en annan administratör på företaget.</p>
+                  <div class="search-for-admin">
+                    <p class="choose-admin-title">Välj administratör</p>
+                    <div class="input-group">
+                      <i class="fa-regular fa-magnifying-glass"></i>
+                      <input type="text" id="admin-search" name="admin-search" placeholder="Sök administratör">
+                      <i class="fa-regular fa-chevron-down"></i>
+                      <div class="dropdown-results">
+                        <p>Anna Karlsson Avdelning L 070 555 0120</p>
+                        <p>Annika Warren Avdelning L 070 555 0120</p>
+                        <p>Annie Simmons Avdelning L 070 555 0120</p>
+                        <p>Ann-Marie Cooper Avdelning L 070 555 0120</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+  
+              <div class="modal-footer">
+                  <button class="default-outline-button" data-bs-dismiss="modal">TILLBAKA</button>
+                  <button class="default-button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#sentModal">ACCEPTERA</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>

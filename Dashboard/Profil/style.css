@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://use.typekit.net/sxz2efx.css");
 /* -------------------------*/
 /* ------ Variables -------*/
 /* ------------------------*/
@@ -54,11 +55,6 @@ input:focus-visible {
   padding: 10px 24px;
   border: none;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  height: 44px;
   border-radius: 3px;
   color: white;
   font-size: 14px;
@@ -70,11 +66,8 @@ input:focus-visible {
 .default-button:hover {
   background: #1A6F84;
 }
-.default-button:active {
-  background: #128090;
-}
 .default-button.disabled {
-  background: #D2E0E2;
+  background: #C8D4D6;
   cursor: default;
   pointer-events: none;
 }
@@ -125,6 +118,23 @@ input:focus-visible {
 }
 .back:hover {
   color: #354A4B;
+}
+
+.delete-button-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  color: #9D302B;
+  cursor: pointer;
+  transition: all 300ms ease-out;
+}
+.delete-button-text:hover {
+  color: #5B0303;
+}
+.delete-button-text p {
+  margin: 0;
 }
 
 /* -------------------*/
@@ -214,7 +224,7 @@ header {
 }
 .selections .page-link-item {
   width: 100%;
-  padding: 10px 30px;
+  padding: 16px 0 16px 48px;
   transition: background ease-out 300ms;
   color: #354A4B;
 }
@@ -222,7 +232,7 @@ header {
   background: #E8F1F2;
 }
 .selections .page-link-item.active {
-  background: #BAE9F0;
+  background: #9D302B;
   font-weight: 600;
 }
 .selections .page-link-item i {
@@ -238,10 +248,13 @@ header {
 }
 
 .profile-wrapper {
+  background: #F6FBFC;
+  padding: 0;
   margin-top: 73px;
 }
 .profile-wrapper .top-title {
   padding: 64px 0 48px 30px;
+  background-color: white;
 }
 .profile-wrapper .top-title .title {
   color: #0B424A;
@@ -262,6 +275,7 @@ header {
   gap: 24px;
   margin: auto;
   padding-bottom: 96px;
+  padding-top: 32px;
 }
 .profile-wrapper .user-information-wrapper .info-section {
   display: flex;
@@ -289,6 +303,9 @@ header {
 .profile-wrapper .user-information-wrapper .personal .input-group .group {
   width: calc(50% - 16px);
 }
+.profile-wrapper .user-information-wrapper .personal .profile-wrapper {
+  background: white;
+}
 .profile-wrapper .user-information-wrapper .personal .profile-wrapper .title {
   color: #303133;
   font-size: 14px;
@@ -303,6 +320,7 @@ header {
 .profile-wrapper .user-information-wrapper .personal .profile-wrapper .delete-profile-pic {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 24px;
   padding: 31px 55px;
   border: 1px solid #E8F1F2;
@@ -314,10 +332,10 @@ header {
 }
 .profile-wrapper .user-information-wrapper .personal .profile-wrapper .delete-profile-pic .delete-button {
   display: flex;
-  flex-wrap: wrap;
+  white-space: nowrap;
   justify-content: center;
-  gap: 8px;
   align-items: center;
+  gap: 8px;
   color: #9D302B;
   cursor: pointer;
   transition: all 300ms ease-out;
@@ -434,7 +452,8 @@ header {
   gap: 8px;
   align-items: center;
   color: #9D302B;
-  cursor: pointer;
+  background: transparent;
+  border: none;
   transition: all 300ms ease-out;
 }
 .profile-wrapper .buttons .delete-button:hover {
@@ -450,4 +469,77 @@ header {
 }
 .profile-wrapper .buttons .default-outline-button, .profile-wrapper .buttons .default-button {
   text-transform: none !important;
+}
+
+.delete-admin-modal .modal-dialog {
+  max-width: 700px;
+}
+.delete-admin-modal .modal-content .modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  padding: 96px;
+}
+.delete-admin-modal .modal-content .modal-body .info-icon {
+  font-size: 20px;
+  padding: 10px;
+  background: #F9C1BF;
+  border: 8px solid #F9DAD7;
+  border-radius: 100%;
+}
+.delete-admin-modal .modal-content .modal-body .modal-title {
+  color: #0B424A;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.delete-admin-modal .modal-content .modal-body .sub-title {
+  text-align: center;
+  color: #526667;
+  font-weight: 400;
+  line-height: 24px;
+}
+.delete-admin-modal .modal-content .modal-body .search-for-admin {
+  width: 100%;
+}
+.delete-admin-modal .modal-content .modal-body .search-for-admin .choose-admin-title {
+  font-family: "proxima-nova", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  color: #303133;
+}
+.delete-admin-modal .modal-content .modal-body .search-for-admin .input-group {
+  position: relative;
+}
+.delete-admin-modal .modal-content .modal-body .search-for-admin .input-group input {
+  padding: 7px 0 7px 40px;
+  position: relative;
+}
+.delete-admin-modal .modal-content .modal-body .search-for-admin .input-group .fa-magnifying-glass {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  left: 17px;
+}
+.delete-admin-modal .modal-content .modal-body .search-for-admin .input-group .fa-chevron-down {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  right: 17px;
+  transition: transform 300ms ease-out;
+}
+.delete-admin-modal .modal-content .modal-body .search-for-admin .input-group .fa-chevron-down[open] {
+  transform: rotate(180deg);
+}
+.delete-admin-modal .modal-content .modal-body .search-for-admin .input-group .dropdown-results {
+  display: none;
+  position: absolute;
+  top: 30px;
+  padding: 17px;
+  width: 100%;
+}
+.delete-admin-modal .modal-footer {
+  border: none;
 }/*# sourceMappingURL=style.css.map */
