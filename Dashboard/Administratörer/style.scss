@@ -42,6 +42,7 @@
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
+    margin-bottom: 45px;
   }
 
   .sub-heading {
@@ -101,9 +102,14 @@
     input {
       padding-left: 40px;
     }
-
-    .export {
-      margin-left: auto;
+    .delete {
+      margin-left: auto; // This will push both Radera and Export to the right.
+      color: $alerts600;
+      border-color: $alerts600;
+      &:hover {
+        border-color: $primaryRedHover;
+        color: $primaryRedHover;
+      }
     }
   }
 }
@@ -142,18 +148,6 @@
           z-index: 100;
         }
       }
-
-      .radio-buttons {
-        display: flex;
-        gap: 16px;
-
-        .yes-button,
-        .no-button {
-          display: flex;
-          gap: 8px;
-        }
-      }
-
     }
   }
 }
@@ -203,16 +197,20 @@
   margin-bottom: 48px;
   .input-fields {
     display: flex; 
-    flex-direction: column;
-    gap: 24px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px 16px;
     p {
       margin-bottom: 4px;
     }
     .input-field {
+      width: calc(50% - 16px);;
       .text {
-        display: flex; 
-        gap: 4px;
-        align-items: center;
+        p {
+          font-size: 12px;
+          color: $primary900;
+          font-weight: 500;
+        }
         .sub {
           font-size: 12px;
           line-height: 12.5px;
@@ -233,19 +231,69 @@
         z-index: 100;
       }
     }
-    .radio-buttons {
-      display: flex; 
-      gap: 16px;
-      .yes-button, .no-button {
+    .authorization {
+      width: 100%;
+      .text {
+        p {
+          margin-bottom: 16px;
+        }
+      }
+      .radio-buttons {
         display: flex;
-        gap: 8px;
+        flex-direction: column;
+        gap: 16px;
+
+        .organization-button,
+        .department-button {
+          display: flex;
+          gap: 8px;
+        }
       }
     }
     .create-button {
-      display: flex;
-      justify-content: flex-end;
+      margin-left: auto;
     }
   }
 }
 
+// MODAL STYLING
 
+.created-modal {
+  .modal-dialog {
+    max-width: 700px;
+  }
+  .modal-content {
+    padding: 96px;
+  }
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 48px;
+
+    .fa-check {
+      font-size: 20px;
+      color: $primary600;
+      background: $primary200;
+      border: 8px solid $primary100;
+      padding: 10px;
+      border-radius: 100%;
+      margin-bottom: 32px;
+    }
+    .modal-title {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 500;
+      margin-bottom: 24px;
+      color: $primary900;
+    }
+  }
+
+  .modal-footer {
+    border: none;
+    justify-content: center;
+    padding-top: 0px;
+  }
+}
