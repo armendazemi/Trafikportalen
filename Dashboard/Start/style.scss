@@ -93,13 +93,28 @@
     background: #E8F1F2;
     padding: 16px 24px;
     border-radius: 5px;
+    background-color: $primary100;
     cursor: pointer;
-    p {
-      font-size: 22px;
-      font-weight: 500;
-      line-height: 30px;
-      margin-bottom: 0px;
+    .title-and-amount {
+      display: flex;
+      gap: 8px;
+      .title {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 30px;
+        margin: 0px;
+      }
+      .amount {
+        display: inline-block;
+        height: 30px;
+        color: white;
+        background: $primary600;
+        padding: 4px 12px;
+        border-radius: 1000000px;
+        margin: 0;
+      }
     }
+   
   }
 }
 
