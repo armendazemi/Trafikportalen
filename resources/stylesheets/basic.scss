@@ -280,8 +280,9 @@ header {
         background: $light;
     }
     &.active {
-        background: $alerts600;
+        background: $primary600;
         font-weight: 600;
+        color: white;
       }
       i{
         font-size: 21px;
