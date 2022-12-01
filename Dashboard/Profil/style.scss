@@ -6,15 +6,18 @@
   padding: 0;
   // Styles affecting all sections
   margin-top: 73px;
+
   .top-title {
     padding: 64px 0 48px 30px;
     background-color: white;
+
     .title {
       color: $primary900;
       font-size: 36px;
       line-height: 43.2px;
       margin-bottom: 16px;
     }
+
     .sub-title {
       color: $secondary600;
       font-family: "Proxima Nova", sans-serif;
@@ -50,6 +53,7 @@
         font-weight: 500;
         margin-bottom: 8px;
       }
+
       .sub-title {
         color: $secondary600;
         font-weight: 400;
@@ -61,23 +65,28 @@
     .personal {
       .input-group {
         gap: 24px 16px;
-        .group{
+
+        .group {
           width: calc(50% - 16px);
         }
       }
+
       .profile-wrapper {
         background: white;
+
         .title {
           color: $neutral600;
           font-size: 14px;
           font-weight: 400;
           margin-bottom: 4px;
         }
+
         .action-wrapper {
           display: flex;
           gap: 16px;
           justify-content: space-between;
         }
+
         .delete-profile-pic {
           display: flex;
           flex-direction: column;
@@ -86,10 +95,12 @@
           padding: 31px 55px;
           border: 1px solid $secondary100;
           border-radius: 3px;
+
           .profile-picture {
             width: 64px;
             border-radius: 100%
           }
+
           .delete-button {
             display: flex;
             white-space: nowrap;
@@ -99,14 +110,17 @@
             color: $alerts600;
             cursor: pointer;
             transition: all 300ms ease-out;
+
             &:hover {
               color: $primaryRedHover;
             }
+
             p {
               margin: 0;
             }
           }
         }
+
         .upload-profile-pic {
           display: flex;
           flex-direction: column;
@@ -116,6 +130,7 @@
           border: 1px solid $secondary100;
           border-radius: 3px;
           text-align: center;
+
           i {
             font-size: 24px;
             color: $primary600;
@@ -125,12 +140,15 @@
             border: 8px solid $primary50;
             margin-bottom: 16px;
           }
+
           span {
             color: $primary600;
           }
+
           label {
             cursor: pointer;
           }
+
           input[type=file] {
             display: none;
           }
@@ -143,18 +161,23 @@
   .company {
     .input-group {
       gap: 24px;
+
       .group {
         width: 100%;
       }
+
       label {
         margin-bottom: 4px;
       }
+
       .company-zipcode-city {
         display: flex;
         gap: 16px;
-        .zip{
+
+        .zip {
           flex: 1;
         }
+
         .city {
           flex: 2;
         }
@@ -166,9 +189,11 @@
   .admin-tasks {
     .input-group {
       gap: 24px;
+
       .group {
         width: 100%;
       }
+
       label {
         margin-bottom: 4px;
       }
@@ -181,11 +206,13 @@
       display: flex;
       flex-direction: column;
       gap: 24px;
+
       .column-email {
         display: flex;
         justify-content: flex-end;
         margin-bottom: -19px;
         padding-right: 72px;
+
         p {
           color: $secondary400;
           font-size: 12px;
@@ -193,18 +220,21 @@
           margin: 0;
         }
       }
+
       .department {
         display: flex;
         gap: 16px;
         align-items: center;
         justify-content: space-between;
         background: $primary50;
-        padding: 16px;  
+        padding: 16px;
+
         .name {
           margin: 0;
         }
+
         .buttons {
-          display: flex; 
+          display: flex;
           gap: 24px;
         }
       }
@@ -217,6 +247,7 @@
       input {
         width: 100%;
       }
+
       label {
         margin-bottom: 4px;
       }
@@ -228,6 +259,7 @@
     flex-direction: row !important;
     justify-content: space-between;
     gap: 16px;
+
     .delete-button {
       display: flex;
       flex-wrap: wrap;
@@ -238,39 +270,46 @@
       background: transparent;
       border: none;
       transition: all 300ms ease-out;
+
       &:hover {
         color: $primaryRedHover;
       }
+
       p {
         margin: 0;
       }
     }
+
     .undo-and-save {
       display: flex;
       align-items: center;
       gap: 24px;
     }
 
-    .default-outline-button, .default-button {
-      text-transform:none !important;
+    .default-outline-button,
+    .default-button {
+      text-transform: none !important;
     }
   }
 }
 
 
 // DELETE ADMIN MODALS
-.delete-admin-modal {
+.delete-admin-modal,
+.delete-success-modal {
   .modal-dialog {
     max-width: 700px;
   }
+
   .modal-content {
     .modal-body {
       display: flex;
       flex-direction: column;
       gap: 24px;
       align-items: center;
-      padding: 96px;
-
+      padding: 96px 96px 58px 96px;
+      margin-bottom: 177px; // Only for when dropdown is open.
+      transition: all 300ms ease-out;
       .info-icon {
         font-size: 20px;
         padding: 10px;
@@ -278,12 +317,14 @@
         border: 8px solid $alerts100;
         border-radius: 100%;
       }
+
       .modal-title {
         color: $primary900;
         font-size: 24px;
         font-weight: 500;
         margin-bottom: 8px;
       }
+
       .sub-title {
         text-align: center;
         color: $secondary600;
@@ -293,26 +334,30 @@
 
       .search-for-admin {
         width: 100%;
+
         .choose-admin-title {
-          font-family:  "proxima-nova", sans-serif;
+          font-family: "proxima-nova", sans-serif;
           font-size: 14px;
           font-weight: 500;
           letter-spacing: 0.25px;
           color: #303133;
         }
+
         .input-group {
           position: relative;
+
           input {
             padding: 7px 0 7px 40px;
             position: relative;
           }
+
           .fa-magnifying-glass {
             position: absolute;
             z-index: 10;
             top: 10px;
             left: 17px;
           }
-            
+
           .fa-chevron-down {
             position: absolute;
             z-index: 10;
@@ -320,14 +365,15 @@
             right: 17px;
             transition: transform 300ms ease-out;
             cursor: pointer;
-            &[open]{
+
+            &[open] {
               transform: rotate(180deg);
             }
           }
+
           .dropdown-results {
             display: none;
             flex-direction: column;
-            gap: 8px;
             position: absolute;
             background-color: white;
             border: 1px solid $secondary100;
@@ -337,19 +383,38 @@
             width: 100%;
             height: 177px;
             overflow-y: scroll;
+
+            &::-webkit-scrollbar-track {
+              border-radius: 10px;
+              background-color: #F5F5F5;
+            }
+
+            &::-webkit-scrollbar {
+              width: 8px;
+              background-color: #F5F5F5;
+            }
+
+            &::-webkit-scrollbar-thumb {
+              border-radius: 10px;
+              background-color: $primary400;
+            }
+
             p {
               margin: 0;
               padding: 8px 17px;
               cursor: pointer;
               transition: background 300ms ease-out;
+
               &:hover {
                 background: $primary50;
               }
             }
           }
+
           #dropdownCheck {
             display: none;
-            &:checked ~ .dropdown-results {
+
+            &:checked~.dropdown-results {
               display: flex;
             }
           }
@@ -360,6 +425,34 @@
   }
 
   .modal-footer {
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding-bottom: 96px;
     border: none;
+
+    .delete {
+      background: $alerts600;
+
+      &:hover {
+        background: $primaryRedHover;
+      }
+    }
+  }
+}
+
+.delete-success-modal {
+  .modal-body {
+    padding-bottom: 48px !important;
+    margin-bottom: 0 !important;
+  }
+  i {
+    font-size: 20px;
+    color: $primary800;
+    padding: 10px;
+    background: $primary400;
+    border: 10px solid $primary200;
+    border-radius: 100%;
   }
 }
