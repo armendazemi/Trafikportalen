@@ -108,6 +108,9 @@ input {
 }
 
 .default-outline-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     background: none;
     border: 2px solid $primary;
     color: $primary;

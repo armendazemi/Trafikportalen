@@ -312,9 +312,6 @@
             top: 10px;
             left: 17px;
           }
-          input[type=checkbox] {
-            display:none;
-            }
             
           .fa-chevron-down {
             position: absolute;
@@ -328,11 +325,33 @@
             }
           }
           .dropdown-results {
-            // display: none;
+            display: none;
+            flex-direction: column;
+            gap: 8px;
             position: absolute;
-            top: 30px;
-            padding: 17px;
+            background-color: white;
+            border: 1px solid $secondary100;
+            border-top: 0;
+            top: 40px;
+            padding: 17px 0;
             width: 100%;
+            height: 177px;
+            overflow-y: scroll;
+            p {
+              margin: 0;
+              padding: 8px 17px;
+              cursor: pointer;
+              transition: background 300ms ease-out;
+              &:hover {
+                background: $primary50;
+              }
+            }
+          }
+          #dropdownCheck {
+            display: none;
+            &:checked ~ .dropdown-results {
+              display: flex;
+            }
           }
         }
 
