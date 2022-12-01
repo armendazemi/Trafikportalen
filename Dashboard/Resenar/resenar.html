@@ -1,129 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Fontawesome (icons) -->
     <script src="https://kit.fontawesome.com/6c1e67d703.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <header class="container-fluid">
-        <div class="row h-100">
+      <div class="row h-100">
         <div class="left-side-header col-3">
-            <img src="../../resources/portal-logo-blue.svg" alt="">
-            <p>Företag</p>
-            <a href="#">
-                <i class="fa-regular fa-chevron-down"></i>
-            </a>
-            
+          <img src="../../resources/images/portal-logo-blue.svg" alt="">
+          <p>Företag</p>
+
         </div>
         <div class="user col-9">
-            <a href="#">
-                <p class="username">Emmy Nilson</p>
-                <img src="../../resources/user-prof.png" alt="" class="user-profile-pic">
-            </a>
-            
+          <a href="#">
+            <p class="username">Emmy Nilson</p>
+            <img src="../../resources/images/user-prof.png" alt="" class="user-profile-pic">
+          </a>
+
         </div>
-    </div>
+      </div>
     </header>
 
     <div class="main container-fluid">
-        <div class="row">
-            <!-- PAGE LINKS LEFT SIDE -->
-            <div class="selections col-2">
-                <div class="links">
-                  <a href="#" class="page-link-item"><i class="fa-regular fa-user-gear"></i> Administratörer</a>
-                  <a href="#" class="page-link-item"><i class="fa-regular fa-grid-2"></i>Avdelningar</a>
-                  <a href="#" class="page-link-item"><i class="fa-regular fa-user-group"></i>Resenärer</a>
-                  <a href="#" class="page-link-item"><i class="fa-regular fa-ticket"></i>Beställ biljett</a>
-                  <a href="#" class="page-link-item"><i class="fa-regular fa-bell"></i>Evenemang</a>
-                  <a href="#" class="page-link-item"><i class="fa-regular fa-chart-simple"></i>Statistik & Rapporter</a>
-                </div>
-                <div class="logout">
-                    <button type="button" class="clear-button"><i class="fa-regular fa-circle-question"></i>Support</button>
-                    <button type="button" class="clear-button"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logga ut</button>
-                </div>
-            </div>
-
-            <!-- KORT DATA (MAIN MIDDLE CONTAINER)  -->
-            <div class="filters offset-2 col-10">
-                <div class="title-and-export">
-                    <div class="title-and-sub">
-                        <h1 class="title">Resenär</h1>
-                        <p>Här kan du lägga till, redigera och ta bort resenärer</p>
-                    </div>
-                    <div class="buttons">
-                        <button type="button" class="default-button"><i class="fa-solid fa-plus"></i>Importera renenärer</button>
-                        <button type="button" class="default-button"><i class="fa-solid fa-plus"></i>Skapa ny resenär</button>
-
-                    </div>
-                </div>
-
-                <!-- FILTERS -->
-                <div class="search-and-filters">
-                    <div class="existing-users">
-                        <p class="heading">Befintliga resenärer</p>
-                        <p class="user-count"> 3 användare</p>
-                    </div>
- 
-                    <div class="search col-12">
-                        <i class="fa-regular fa-magnifying-glass search-icon"></i>
-                        <input type="text" class="col-5" placeholder="Sök på namn eller avdelning">
-                        <button class="default-outline-button filter"><i class="fa-regular fa-bars-filter"></i> FILTER</button>
-                        <button class="default-outline-button disabled export"><i class="fa-solid fa-arrow-up-right-from-square"></i> EXPORTERA</button>
-                    </div>
-                    
-                   
-                </div>
-
-                <!-- COLUMN NAMES FOR CARDS -->
-                <div class="results">
-                    <div class="display-results">
-                            <div class="column-titles">
-                                <div class="form-check col-2">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkAll">
-                                    <p> Namn<i class="fa-light fa-arrow-up-arrow-down"></i></p>
-                                </div>
-                                <p class="col-1">Avdelning</p>
-                                <p class="col-2">Periodbiljetter</p>
-                                <p class="col-2">Tjänsteresor</p>
-                                <p class="col-1">Biljettbärare</p>
-                                <p class="col-1">Kontostatus</p>
-                                <p class="col-1">Skapad</p>
-
-                            </div>
-                    <!-- -------------- CARDS -------------- -->
-                            <div class="table">
-                                <div class="card-info">
-                                    <div class="form-check col-2">
-                                        <input class="form-check-input card-check-btn" type="checkbox" value="" id="test">
-                                        <p class="user-name"> Lisa Nilsson</p>
-                                    </div>
-                                    <p class="col-1">Avdelning Q</p>
-                                    <p class="col-2">365 dagars, 12 zoner</p>
-                                    <p class="col-2">300 SEK/mån</p>
-                                    <p class="col-1">App</p> 
-                                    <p class="col-1 status">Aktiv</p>
-                                    <p class="col-1">2021-12-01</p>
-                                    <div class="delete-and-edit">
-                                        <i class="fa-regular fa-trash-can"></i>
-                                        <i class="fa-light fa-pen"></i>
-                                    </div>
-                                </div>
-                                
-                        </div>
-                        <!-- -------------- CARDS  END-------------- -->
-                    </div> 
-                </div>
-            </div>
+      <div class="row">
+        <!-- PAGE LINKS LEFT SIDE -->
+        <div class="selections col-2">
+          <div class="links">
+            <a href="#" class="page-link-item"><i class="fa-regular fa-user-gear"></i> Administratörer</a>
+            <a href="#" class="page-link-item"><i class="fa-regular fa-grid-2"></i>Avdelningar</a>
+            <a href="#" class="page-link-item"><i class="fa-regular fa-user-group"></i>Resenärer</a>
+            <a href="#" class="page-link-item"><i class="fa-regular fa-ticket"></i>Beställ biljett</a>
+            <a href="#" class="page-link-item"><i class="fa-regular fa-bell"></i>Evenemang</a>
+            <a href="#" class="page-link-item"><i class="fa-regular fa-chart-simple"></i>Statistik &
+              Rapporter</a>
+          </div>
+          <div class="logout">
+            <button type="button" class="clear-button"><i class="fa-regular fa-circle-question"></i>Support</button>
+            <button type="button" class="clear-button"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logga
+              ut</button>
+          </div>
         </div>
-</body>
-<script type="module" src="/main.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <!-- KORT DATA (MAIN MIDDLE CONTAINER)  -->
+        <div class="filters offset-2 col-10">
+          <div class="title-and-export">
+            <div class="title-and-sub">
+              <h1 class="title">Resenär</h1>
+              <p>Här kan du lägga till, redigera och ta bort resenärer</p>
+            </div>
+            <div class="buttons">
+              <a type="button" class="default-button"><i class="fa-solid fa-plus"></i>Importera
+                renenärer</a>
+              <a href="ny-resenar.html" e="button" class="default-button"><i class="fa-solid fa-plus"></i>Skapa ny
+                resenär</a>
+
+            </div>
+          </div>
+
+          <!-- FILTERS -->
+          <div class="search-and-filters">
+            <div class="existing-users">
+              <p class="heading">Befintliga resenärer</p>
+              <p class="user-count"> 3 användare</p>
+            </div>
+
+            <div class="search col-12">
+              <i class="fa-regular fa-magnifying-glass search-icon"></i>
+              <input type="text" class="col-5" placeholder="Sök på namn eller avdelning">
+              <button class="default-outline-button filter"><i class="fa-regular fa-bars-filter"></i>FILTER</button>
+              <button class="default-outline-button disabled export"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i> EXPORTERA</button>
+            </div>
+
+
+          </div>
+
+          <!-- COLUMN NAMES FOR CARDS -->
+          <div class="results">
+            <div class="display-results">
+              <div class="column-titles">
+                <div class="form-check col-2">
+                  <input class="form-check-input" type="checkbox" value="" id="checkAll">
+                  <p> Namn<i class="fa-light fa-arrow-up-arrow-down"></i></p>
+                </div>
+                <p class="col-1">Avdelning</p>
+                <p class="col-2">Periodbiljetter</p>
+                <p class="col-2">Tjänsteresor</p>
+                <p class="col-1">Biljettbärare</p>
+                <p class="col-1">Kontostatus</p>
+                <p class="col-1">Skapad</p>
+
+              </div>
+              <!-- -------------- CARDS -------------- -->
+              <div class="table">
+                <div class="card-info">
+                  <div class="form-check col-2">
+                    <input class="form-check-input card-check-btn" type="checkbox" value="" id="test">
+                    <p class="user-name"> Lisa Nilsson</p>
+                  </div>
+                  <p class="col-1">Avdelning Q</p>
+                  <p class="col-2">365 dagars, 12 zoner</p>
+                  <p class="col-2">300 SEK/mån</p>
+                  <p class="col-1">App</p>
+                  <p class="col-1 status">Aktiv</p>
+                  <p class="col-1">2021-12-01</p>
+                  <div class="delete-and-edit">
+                    <i class="fa-regular fa-trash-can"></i>
+                    <i class="fa-light fa-pen"></i>
+                  </div>
+                </div>
+                
+
+              </div>
+              <!-- -------------- CARDS  END-------------- -->
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+  <script type="module" src="/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
 </html>

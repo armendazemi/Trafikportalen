@@ -312,18 +312,23 @@
             top: 10px;
             left: 17px;
           }
+          input[type=checkbox] {
+            display:none;
+            }
+            
           .fa-chevron-down {
             position: absolute;
             z-index: 10;
             top: 10px;
             right: 17px;
             transition: transform 300ms ease-out;
+            cursor: pointer;
             &[open]{
               transform: rotate(180deg);
             }
           }
           .dropdown-results {
-            display: none;
+            // display: none;
             position: absolute;
             top: 30px;
             padding: 17px;

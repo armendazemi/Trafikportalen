@@ -87,6 +87,8 @@ input {
   padding: 10px 24px;
   border: none;
   display: flex;
+  align-items: center;
+  gap: 8px;
   border-radius: 3px;
   color: white;
   font-size: 14px;
@@ -96,6 +98,7 @@ input {
   transition: background ease-out 300ms;
   &:hover {
     background:  $primary800;
+    color: white;
   }
   &.disabled {
     background: $secondary200;
