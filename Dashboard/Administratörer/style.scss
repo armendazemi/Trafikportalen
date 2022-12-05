@@ -38,11 +38,19 @@
 
 
 .instructions {
+  display: flex;
+  justify-content: space-between;
   .heading {
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
     margin-bottom: 45px;
+  }
+  .created-at {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #A0A0A0;
   }
 
   .sub-heading {
@@ -206,6 +214,9 @@
     .input-field {
       width: calc(50% - 16px);;
       .text {
+        display: flex;
+        gap: 4px;
+        align-items: center;
         p {
           font-size: 12px;
           color: $primary900;
@@ -338,7 +349,7 @@
         width: 100%;
 
         .dropdown-menu {
-          top: 40px;
+          top: 42px;
         }
         input {
           width: 100%;
@@ -425,5 +436,158 @@
     border: none;
     justify-content: center;
     padding-top: 0px;
+  }
+}
+// DELETE ADMIN MODALS
+.delete-admin-modal,
+.delete-success-modal {
+  .modal-dialog {
+    max-width: 700px;
+  }
+
+  .modal-content {
+    .modal-body {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+      padding: 96px 96px 58px 96px;
+      transition: all 300ms ease-out;
+      .info-icon {
+        font-size: 20px;
+        padding: 10px;
+        background: $alerts200;
+        border: 8px solid $alerts100;
+        border-radius: 100%;
+      }
+
+      .modal-title {
+        color: $primary900;
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 8px;
+      }
+
+      .sub-title {
+        text-align: center;
+        color: $secondary600;
+        font-weight: 400;
+        line-height: 24px;
+      }
+
+      .search-for-admin {
+        width: 100%;
+
+        .choose-admin-title {
+          font-family: "proxima-nova", sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          letter-spacing: 0.25px;
+          color: #303133;
+        }
+
+        .input-group {
+          position: relative;
+
+          input {
+            padding: 7px 0 7px 40px;
+            position: relative;
+          }
+
+          .fa-magnifying-glass {
+            position: absolute;
+            z-index: 10;
+            top: 10px;
+            left: 17px;
+          }
+
+          .fa-chevron-down {
+            position: absolute;
+            z-index: 10;
+            top: 10px;
+            right: 17px;
+            transition: transform 300ms ease-out;
+            cursor: pointer;
+          }
+
+          .dropdown-results {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            background-color: white;
+            border: 1px solid $secondary100;
+            border-top: 0;
+            top: 40px;
+            padding: 17px 0;
+            width: 100%;
+            height: 177px;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar-track {
+              border-radius: 10px;
+              background-color: #F5F5F5;
+            }
+
+            &::-webkit-scrollbar {
+              width: 8px;
+              background-color: #F5F5F5;
+            }
+
+            &::-webkit-scrollbar-thumb {
+              border-radius: 10px;
+              background-color: $primary400;
+            }
+
+            p {
+              margin: 0;
+              padding: 8px 17px;
+              cursor: pointer;
+              transition: background 300ms ease-out;
+
+              &:hover {
+                background: $primary50;
+              }
+            }
+          }
+
+          #dropdownCheck {
+            display: none;
+          }
+        }
+
+      }
+    }
+  }
+
+  .modal-footer {
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding-bottom: 96px;
+    border: none;
+    transition: all 300ms ease-out;
+    .delete {
+      background: $alerts600;
+
+      &:hover {
+        background: $primaryRedHover;
+      }
+    }
+  }
+}
+
+.delete-success-modal {
+  .modal-body {
+    padding-bottom: 48px !important;
+    margin-bottom: 0 !important;
+  }
+  i {
+    font-size: 20px;
+    color: $primary800;
+    padding: 10px;
+    background: $primary400;
+    border: 10px solid $primary200;
+    border-radius: 100%;
   }
 }

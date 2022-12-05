@@ -289,11 +289,21 @@ header {
   border-radius: 10px;
 }
 
+.instructions {
+  display: flex;
+  justify-content: space-between;
+}
 .instructions .heading {
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
   margin-bottom: 45px;
+}
+.instructions .created-at {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #A0A0A0;
 }
 .instructions .sub-heading {
   color: #526667;
@@ -435,6 +445,11 @@ header {
 .form-new .input-fields .input-field {
   width: calc(50% - 16px);
 }
+.form-new .input-fields .input-field .text {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
 .form-new .input-fields .input-field .text p {
   font-size: 12px;
   color: #0B424A;
@@ -559,7 +574,7 @@ header {
   width: 100%;
 }
 .form-new .current-auth .add-more-departments .dropdown .dropdown-menu {
-  top: 40px;
+  top: 42px;
 }
 .form-new .current-auth .add-more-departments .dropdown input {
   width: 100%;
@@ -634,4 +649,152 @@ header {
   border: none;
   justify-content: center;
   padding-top: 0px;
+}
+
+.delete-admin-modal .modal-dialog,
+.delete-success-modal .modal-dialog {
+  max-width: 700px;
+}
+.delete-admin-modal .modal-content .modal-body,
+.delete-success-modal .modal-content .modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  padding: 96px 96px 58px 96px;
+  transition: all 300ms ease-out;
+}
+.delete-admin-modal .modal-content .modal-body .info-icon,
+.delete-success-modal .modal-content .modal-body .info-icon {
+  font-size: 20px;
+  padding: 10px;
+  background: #F9C1BF;
+  border: 8px solid #F9DAD7;
+  border-radius: 100%;
+}
+.delete-admin-modal .modal-content .modal-body .modal-title,
+.delete-success-modal .modal-content .modal-body .modal-title {
+  color: #0B424A;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.delete-admin-modal .modal-content .modal-body .sub-title,
+.delete-success-modal .modal-content .modal-body .sub-title {
+  text-align: center;
+  color: #526667;
+  font-weight: 400;
+  line-height: 24px;
+}
+.delete-admin-modal .modal-content .modal-body .search-for-admin,
+.delete-success-modal .modal-content .modal-body .search-for-admin {
+  width: 100%;
+}
+.delete-admin-modal .modal-content .modal-body .search-for-admin .choose-admin-title,
+.delete-success-modal .modal-content .modal-body .search-for-admin .choose-admin-title {
+  font-family: "proxima-nova", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  color: #303133;
+}
+.delete-admin-modal .modal-content .modal-body .search-for-admin .input-group,
+.delete-success-modal .modal-content .modal-body .search-for-admin .input-group {
+  position: relative;
+}
+.delete-admin-modal .modal-content .modal-body .search-for-admin .input-group input,
+.delete-success-modal .modal-content .modal-body .search-for-admin .input-group input {
+  padding: 7px 0 7px 40px;
+  position: relative;
+}
+.delete-admin-modal .modal-content .modal-body .search-for-admin .input-group .fa-magnifying-glass,
+.delete-success-modal .modal-content .modal-body .search-for-admin .input-group .fa-magnifying-glass {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  left: 17px;
+}
+.delete-admin-modal .modal-content .modal-body .search-for-admin .input-group .fa-chevron-down,
+.delete-success-modal .modal-content .modal-body .search-for-admin .input-group .fa-chevron-down {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  right: 17px;
+  transition: transform 300ms ease-out;
+  cursor: pointer;
+}
+.delete-admin-modal .modal-content .modal-body .search-for-admin .input-group .dropdown-results,
+.delete-success-modal .modal-content .modal-body .search-for-admin .input-group .dropdown-results {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #E8F1F2;
+  border-top: 0;
+  top: 40px;
+  padding: 17px 0;
+  width: 100%;
+  height: 177px;
+  overflow-y: scroll;
+}
+.delete-admin-modal .modal-content .modal-body .search-for-admin .input-group .dropdown-results::-webkit-scrollbar-track,
+.delete-success-modal .modal-content .modal-body .search-for-admin .input-group .dropdown-results::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+.delete-admin-modal .modal-content .modal-body .search-for-admin .input-group .dropdown-results::-webkit-scrollbar,
+.delete-success-modal .modal-content .modal-body .search-for-admin .input-group .dropdown-results::-webkit-scrollbar {
+  width: 8px;
+  background-color: #F5F5F5;
+}
+.delete-admin-modal .modal-content .modal-body .search-for-admin .input-group .dropdown-results::-webkit-scrollbar-thumb,
+.delete-success-modal .modal-content .modal-body .search-for-admin .input-group .dropdown-results::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #BAE9F0;
+}
+.delete-admin-modal .modal-content .modal-body .search-for-admin .input-group .dropdown-results p,
+.delete-success-modal .modal-content .modal-body .search-for-admin .input-group .dropdown-results p {
+  margin: 0;
+  padding: 8px 17px;
+  cursor: pointer;
+  transition: background 300ms ease-out;
+}
+.delete-admin-modal .modal-content .modal-body .search-for-admin .input-group .dropdown-results p:hover,
+.delete-success-modal .modal-content .modal-body .search-for-admin .input-group .dropdown-results p:hover {
+  background: #F8FCFD;
+}
+.delete-admin-modal .modal-content .modal-body .search-for-admin .input-group #dropdownCheck,
+.delete-success-modal .modal-content .modal-body .search-for-admin .input-group #dropdownCheck {
+  display: none;
+}
+.delete-admin-modal .modal-footer,
+.delete-success-modal .modal-footer {
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding-bottom: 96px;
+  border: none;
+  transition: all 300ms ease-out;
+}
+.delete-admin-modal .modal-footer .delete,
+.delete-success-modal .modal-footer .delete {
+  background: #9D302B;
+}
+.delete-admin-modal .modal-footer .delete:hover,
+.delete-success-modal .modal-footer .delete:hover {
+  background: #5B0303;
+}
+
+.delete-success-modal .modal-body {
+  padding-bottom: 48px !important;
+  margin-bottom: 0 !important;
+}
+.delete-success-modal i {
+  font-size: 20px;
+  color: #1A6F84;
+  padding: 10px;
+  background: #BAE9F0;
+  border: 10px solid #E2F3F6;
+  border-radius: 100%;
 }/*# sourceMappingURL=style.css.map */
