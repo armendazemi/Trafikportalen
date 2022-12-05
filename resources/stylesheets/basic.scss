@@ -115,9 +115,11 @@ input {
     background: none;
     border: 2px solid $primary;
     color: $primary;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1px;
     border-radius: 3px;
     padding: 10px 24px;
-    text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.1px;
     transition: all ease-out 300ms;
