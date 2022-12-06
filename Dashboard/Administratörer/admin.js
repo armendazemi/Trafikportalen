@@ -34,7 +34,7 @@ function openAdminDropdownMenu() {
         dropdownMenuAdmin.style.opacity = "1";
         dropdownMenuAdmin.classList.add("show");
         dropdownMenuAdmin.style.pointerEvents = "all";
-        currentAuthorization.style.marginTop = 50 + dropdownMenuAdmin.clientHeight + "px";
+        currentAuthorization.style.marginTop = 24 + dropdownMenuAdmin.clientHeight + "px";
         chevdownAdmin.style.transform = "rotate(180deg)";
    }
 }
@@ -78,7 +78,7 @@ function handleDepartmentDropdownMenu() {
         addMoreDepartmentsDropDownMenu.style.pointerEvents = "all";
         addMoreDepartmentsDropDownMenu.classList.add("show");
         openDropdownMenuButton.style.transform = "rotate(180deg)";
-        bottomButtons.style.marginTop = 50 + addMoreDepartmentsDropDownMenu.clientHeight + "px";
+        bottomButtons.style.marginTop = 24 + addMoreDepartmentsDropDownMenu.clientHeight + "px";
     } else {
         addMoreDepartmentsDropDownMenu.style.opacity = "0";
         addMoreDepartmentsDropDownMenu.style.pointerEvents = "none";
