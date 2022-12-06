@@ -37,8 +37,9 @@
         <!-- PAGE LINKS LEFT SIDE -->
         <div class="selections col-2">
           <div class="links">
-            <a href="./start.html" class="page-link-item active"><i class="fa-regular fa-user-gear"></i> Administratörer</a>
-            <a href="#" class="page-link-item"><i class="fa-regular fa-grid-2"></i>Avdelningar</a>
+            <a href="../Administratörer/start.html" class="page-link-item"><i class="fa-regular fa-user-gear"></i>
+              Administratörer</a>
+            <a href="./start.html" class="page-link-item active"><i class="fa-regular fa-grid-2"></i>Avdelningar</a>
             <a href="#" class="page-link-item"><i class="fa-regular fa-user-group"></i>Resenärer</a>
             <a href="#" class="page-link-item"><i class="fa-regular fa-ticket"></i>Beställ biljett</a>
             <a href="#" class="page-link-item"><i class="fa-regular fa-bell"></i>Evenemang</a>
@@ -56,11 +57,12 @@
         <div class="filters offset-2 col-10">
           <div class="title-and-export">
             <div class="title-and-sub">
-              <h1 class="title">Administratörer</h1>
-              <p>Här kan du lägga till, redigera och ta bort administratörer</p>
+              <h1 class="title">Avdelingar</h1>
+              <p>Här kan du lägga till, redigera och ta bort avdelningar</p>
             </div>
             <div class="buttons">
-              <a href="./ny-admin.html" e="button" class="default-button"><i class="fa-solid fa-plus"></i>Skapa ny administratör</a>
+              <a href="./ny-avdelning.html" e="button" class="default-button"><i class="fa-solid fa-plus"></i>Skapa ny
+                avdelning</a>
 
             </div>
           </div>
@@ -68,16 +70,16 @@
           <!-- FILTERS -->
           <div class="search-and-filters">
             <div class="existing-users">
-              <p class="heading">Befintliga resenärer</p>
-              <p class="user-count"> 50 användare</p>
+              <p class="heading">Befintliga avdelningar</p>
+              <p class="user-count"> 20 avdelnngar</p>
             </div>
 
             <div class="search col-12">
               <i class="fa-regular fa-magnifying-glass search-icon"></i>
               <input type="text" class="col-5" placeholder="Sök på namn eller avdelning">
               <button class="default-outline-button filter"><i class="fa-regular fa-bars-filter"></i>FILTER</button>
-              <button class="default-outline-button disabled delete"><i class="fa-regular fa-trash-can"></i> Radera</button>
-              <button class="default-outline-button disabled export"><i class="fa-solid fa-arrow-up-right-from-square"></i> Exportera</button>
+              <button class="default-outline-button disabled delete"><i class="fa-regular fa-trash-can"></i>
+                Radera</button>
             </div>
 
 
@@ -89,31 +91,28 @@
               <div class="column-titles">
                 <div class="form-check col-2">
                   <input class="form-check-input" type="checkbox" value="" id="checkAll">
-                  <p> Namn<i class="fa-light fa-arrow-up-arrow-down"></i></p>
+                  <p> Avdelning<i class="fa-light fa-arrow-up-arrow-down"></i></p>
                 </div>
-                <p class="col-2">E-postadress</p>
-                <p class="col-2">Avdelning</p>
-                <p class="col-2">Skapad</p>
+                <p class="col-2">Antal resenärer</p>
+                <p class="col-2">Avd.admin</p>
+                <p class="col-2">Ref ID</p>
+                <p class="col-2">Status</p>
               </div>
               <!-- -------------- CARDS -------------- -->
               <div class="table">
                 <div class="card-info">
                   <div class="form-check col-2">
                     <input class="form-check-input card-check-btn" type="checkbox" value="" id="test">
-                    <p class="user-name"> Benjamin Mygga</p>
+                    <p class="user-name"> Avdelning A</p>
                   </div>
-                  <p class="col-2">benjamin@mail.com</p>
-                  <p class="col-2">Avdelning A</p>
-                  <p class="col-2">2021-01-01</p>
+                  <p class="col-2">30</p>
+                  <p class="col-2">Wade Warren</p>
+                  <p class="col-2">11478963</p>
+                  <p class="col-2">2022-05-12</p>
                   <div class="delete-and-edit">
                     <i class="fa-regular fa-trash-can"></i>
-                    <a href="./edit-admin.html">
-                      <i class="fa-regular fa-circle-arrow-right"></i>
-                    </a>
                   </div>
                 </div>
-                
-
               </div>
               <!-- -------------- CARDS  END-------------- -->
             </div>
@@ -121,7 +120,7 @@
         </div>
       </div>
   </body>
-  <script type="module" src="./admin.js"></script>
+  <script type="module" src="./avdelningar.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>

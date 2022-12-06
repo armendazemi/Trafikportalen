@@ -43,7 +43,6 @@ if (window.location.pathname.includes("edit-admin")) {
 	//-----------------------
 	// Authorization Section
 	//-----------------------
-	const authorizationSection = document.querySelector(".authorization");
 	const dropdownAdmin = document.querySelector(".dropdown.admin");
 	const dropdownAdminButton = document.querySelector(".dropdown.admin button");
 	const chevdownAdmin = dropdownAdminButton.querySelector(".fa-chevron-down");
@@ -165,10 +164,15 @@ if (window.location.pathname.includes("edit-admin")) {
 		let searchTerm = event.target.value.toLowerCase();
 		dropDownItemsDepartment.forEach((item) => {
 			let departmentName = item.innerHTML.toLowerCase();
-			if (departmentName.includes(searchTerm)) {
+			if (departmentName.includes(searchTerm) && searchTerm !== "") {
 				item.style.backgroundColor = "#F8FCFD";
-			} else {
+				item.style.display = "block";
+			} else if(searchTerm === "") {
 				item.style.backgroundColor = "white";
+				item.style.display = "block";
+			}
+			else {
+				item.style.display = "none";
 			}
 		});
 	}
@@ -230,42 +234,45 @@ if (window.location.pathname.includes("edit-admin")) {
 	const deleteAdminModalFooter = deleteAdminModal.querySelector(".modal-footer");
     const adminSearchInput = adminSearch.querySelector("input");
 
-    function openAdminDropdownMenu() {
-        if (!deleteModaldropdownResults.classList.contains("show")) {
-			deleteModaldropdownResults.style.display = "block";
-			deleteAdminModalFooter.style.marginTop = 24 + deleteModaldropdownResults.clientHeight + "px";
-			deleteModaldropdownResults.classList.add("show");
-			adminSearchChevDown.style.transform = "rotate(180deg)";
-		} else {
-			deleteModaldropdownResults.style.display = "none";
-			deleteAdminModalFooter.style.marginTop = "8px";
-			deleteModaldropdownResults.classList.remove("show");
-			adminSearchChevDown.style.transform = "rotate(0deg)";
-		}
+    function openDeleteModalDropdown() {
+			if (!deleteModaldropdownResults.classList.contains("show")) {
+				deleteModaldropdownResults.style.display = "block";
+				deleteAdminModalFooter.style.marginTop = 24 + deleteModaldropdownResults.clientHeight + "px";
+				deleteModaldropdownResults.classList.add("show");
+				adminSearchChevDown.style.transform = "rotate(180deg)";
+			} else {
+				deleteModaldropdownResults.style.display = "none";
+				deleteAdminModalFooter.style.marginTop = "8px";
+				deleteModaldropdownResults.classList.remove("show");
+				adminSearchChevDown.style.transform = "rotate(0deg)";
+			}
     }
 
     function handleAdminSearch(event) {
         if (!deleteModaldropdownResults.classList.contains("show")) {
-            openAdminDropdownMenu();
+					openDeleteModalDropdown();
         }
         // Close when input is empty
         if (event.target.value === "") {
-            openAdminDropdownMenu();
+					openDeleteModalDropdown();
         }
         let searchTerm = event.target.value.toLowerCase();
-        console.log(searchTerm);
-        deleteModaldropdownResults.querySelectorAll("p").forEach((item) => {
+        deleteModaldropdownResults.querySelectorAll(".dropdown-item").forEach((item) => {
             let adminName = item.innerHTML.toLowerCase();
-            if (adminName.includes(searchTerm)) {
+            if (adminName.includes(searchTerm) && searchTerm !== "") {
                 item.style.backgroundColor = "#F8FCFD";
-            } else {
+								item.style.display = "block";
+            } else if(searchTerm === "") {
                 item.style.backgroundColor = "white";
-            }
+								item.style.display = "block";
+            } else {
+								item.style.display = "none";
+						}
 
         });
     }
-	adminSearchChevDown.addEventListener("click", openAdminDropdownMenu);
-    adminSearchInput.addEventListener("input", handleAdminSearch);
+		adminSearchChevDown.addEventListener("click", openAdminDropdownMenu);
+		adminSearchInput.addEventListener("input", handleAdminSearch);
 	// ----------------------------
 	// -------EDIT ADMIN END-------
 	// ----------------------------
