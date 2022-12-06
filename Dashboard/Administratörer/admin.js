@@ -1,17 +1,43 @@
 // This file is only for the pages that are under the Administratörer folder.
 
 const userData = {
-    name: document.querySelector("#name"),
-    lastName: document.querySelector("#lastName"),
-    emailPrimary: document.querySelector("#emailPrimary"),
-    emailSecondary: document.querySelector("#emailSecondary"),
-    mobile: document.querySelector("#mobile"),
-    phone: document.querySelector("#phone"),
-    adminStatus: document.querySelector("#adminStatus"),
+    firstName: document.querySelector("#firstName").value,
+    lastName: document.querySelector("#lastName").value,
+    emailPrimary: document.querySelector("#emailPrimary").value,
+    emailSecondary: document.querySelector("#emailSecondary").value,
+    mobile: document.querySelector("#mobile").value,
+    phone: document.querySelector("#phone").value,
+    adminStatus: document.querySelector("#adminStatus").innerText,
+    authTags: document.querySelector(".auth-tags").querySelectorAll(".tag"),
 }
-let userDataHasChanged = false;
 
+// --------------------------
+// Input section
+// --------------------------
+let userDataHasChanged = false;
+const newForm = document.querySelector(".form-new");
+const inputFields = newForm.querySelector(".input-fields").querySelectorAll("input");
+const adminStatus = document.querySelector("#adminStatus");
+
+inputFields.forEach(input => {
+    input.addEventListener("input", () => {
+        userDataHasChanged = true;
+        console.log('changed');
+    })
+});
+// ----------------
+// UNDO CHANGES
+// ----------------
+const undoButton = document.querySelector(".undo");
+undoButton.addEventListener("click", () => {
+    userDataHasChanged = false;
+    location.reload();
+});
+
+
+//-----------------------
 // Authorization Section
+//-----------------------
 const authorizationSection = document.querySelector(".authorization");
 const dropdownAdmin = document.querySelector(".dropdown.admin");
 const dropdownAdminButton = document.querySelector(".dropdown.admin button");
@@ -168,6 +194,8 @@ window.onbeforeunload = function(e) {
     if (userDataHasChanged)
         return "You have unsaved changes. Are you sure you want to leave?"; 
 };
+
+
 
 
 
