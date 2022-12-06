@@ -7,7 +7,7 @@ let filterButton = document.querySelector('.filter-btn');
 
 
 let checkAllRadioButton = document.querySelector('#checkAll');
-let allCardRadioButtons = document.querySelectorAll('.card-check-btn');
+let checkBoxes = document.querySelectorAll('.card-check-btn');
 let exportAllOptionsButton = document.querySelector('#exportAll');
 let allExportOptionsRadioButton = document.querySelectorAll('.export-option');
 
@@ -44,11 +44,11 @@ dateFrom.onchange = () => {
 checkAllRadioButton.addEventListener('click', () => {
     // Once we click, the state will change, this will be opposite to the actual state
     if (!checkAllRadioButton.checked) {
-        [...allCardRadioButtons].forEach((radioBtn) => {
+        [...checkBoxes].forEach((radioBtn) => {
             radioBtn.checked = false;
         });
     }else {
-        [...allCardRadioButtons].forEach((radioBtn) => {
+        [...checkBoxes].forEach((radioBtn) => {
             radioBtn.checked = true;
         });
     }
