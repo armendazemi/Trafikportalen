@@ -128,36 +128,37 @@ if (window.location.pathname.includes("ny")) {
 
 }
 
-// -----------------
-// SINGLE DEPARTMENT
-// -----------------
-const departmentInformation = document.querySelector(".department-information");
-const departmentInformationChevronDown = departmentInformation.querySelector(".fa-chevron-down");
-const innerInformationWrapper = departmentInformation.querySelector(".information");
-console.log(innerInformationWrapper);
+if (window.location.pathname === "/Dashboard/Avdelningar/avdelning.html") {
+  // -----------------
+  // SINGLE DEPARTMENT
+  // -----------------
+  const departmentInformation = document.querySelector(".department-information");
+  const departmentInformationChevronDown = departmentInformation.querySelector(".fa-chevron-down");
+  const innerInformationWrapper = departmentInformation.querySelector(".information");
+  console.log(innerInformationWrapper);
 
-function handleDepartmentInformationDisplay() {
-  if (innerInformationWrapper.classList.contains("show")) {
-    innerInformationWrapper.classList.remove("show");
-    innerInformationWrapper.style.maxHeight = "0";
-    innerInformationWrapper.style.opacity = "0";
-    innerInformationWrapper.style.padding = "0";
-    innerInformationWrapper.style.margin = "0";
-    departmentInformationChevronDown.style.transform = "rotate(0deg)";
-  } else {
-    innerInformationWrapper.classList.add("show");
-    innerInformationWrapper.style.maxHeight = "400px";
-    innerInformationWrapper.style.opacity = "1";
-    innerInformationWrapper.style.padding = "24px";
-    innerInformationWrapper.style.marginTop = "32px";
-    departmentInformationChevronDown.style.transform = "rotate(180deg)";
+  function handleDepartmentInformationDisplay() {
+    if (innerInformationWrapper.classList.contains("show")) {
+      innerInformationWrapper.classList.remove("show");
+      innerInformationWrapper.style.maxHeight = "0";
+      innerInformationWrapper.style.opacity = "0";
+      innerInformationWrapper.style.padding = "0";
+      innerInformationWrapper.style.margin = "0";
+      departmentInformationChevronDown.style.transform = "rotate(0deg)";
+    } else {
+      innerInformationWrapper.classList.add("show");
+      innerInformationWrapper.style.maxHeight = "400px";
+      innerInformationWrapper.style.opacity = "1";
+      innerInformationWrapper.style.padding = "24px";
+      innerInformationWrapper.style.marginTop = "32px";
+      departmentInformationChevronDown.style.transform = "rotate(180deg)";
+    }
   }
+
+
+  departmentInformation.addEventListener("click", handleDepartmentInformationDisplay);
+
 }
-
-
-departmentInformation.addEventListener("click", handleDepartmentInformationDisplay);
-
-
 const checkAllRadioButton = document.querySelector("#checkAll");
     const checkBoxes = document.querySelectorAll(".form-check-input");
     const deleteBulkButton = document.querySelector(".search").querySelector(".delete");

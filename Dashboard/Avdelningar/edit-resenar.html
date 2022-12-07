@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Fontawesome (icons) -->
+    <script src="https://kit.fontawesome.com/6c1e67d703.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header class="container-fluid">
+      <div class="row h-100">
+        <div class="left-side-header col-2">
+          <img src="../../resources/images/portal-logo-blue.svg" alt="">
+          <p>Företag</p>
+
+        </div>
+        <div class="user col-10">
+          <a href="#">
+            <p class="username">Emmy Nilson</p>
+            <img src="../../resources/images/user-prof.png" alt="" class="user-profile-pic">
+          </a>
+
+        </div>
+      </div>
+    </header>
+
+    <div class="main container-fluid">
+      <div class="row">
+        <!-- PAGE LINKS LEFT SIDE -->
+        <div class="selections col-2">
+          <div class="links">
+            <a href="#" class="page-link-item"><i class="fa-regular fa-user-gear"></i> Administratörer</a>
+            <a href="#" class="page-link-item"><i class="fa-regular fa-grid-2"></i>Avdelningar</a>
+            <a href="#" class="page-link-item"><i class="fa-regular fa-user-group"></i>Resenärer</a>
+            <a href="#" class="page-link-item"><i class="fa-regular fa-ticket"></i>Beställ biljett</a>
+            <a href="#" class="page-link-item"><i class="fa-regular fa-bell"></i>Evenemang</a>
+            <a href="#" class="page-link-item"><i class="fa-regular fa-chart-simple"></i>Statistik & Rapporter</a>
+          </div>
+          <div class="logout">
+            <button type="button" class="clear-button"><i class="fa-regular fa-circle-question"></i>Support</button>
+            <button type="button" class="clear-button"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logga
+              ut</button>
+          </div>
+        </div>
+
+        <!-- AKTIVA BILJETTER  -->
+        <div class="filters offset-2 col-10">
+          <div class="title-and-export">
+            <div class="title-and-sub">
+              <h1 class="title">Ny resenär</h1>
+              <a href="#" class="back"><i class="fa-solid fa-arrow-left"></i> Tillbaka till resenärer</a>
+            </div>
+          </div>
+          <div class="results">
+            <div class="form-new col-6">
+              <div class="instructions">
+                <p class="heading">Resenäruppgifter</p>
+              </div>
+              <div class="input-fields edit-resenar">
+                <div class="input-field">
+                  <div class="text">
+                    <p>Förnamn</p>
+                  </div>
+                  <input type="text" placeholder="Förnamn" value="Eleanor">
+                </div>
+                <div class="input-field">
+                  <div class="text">
+                    <p>Efternamn</p>
+                  </div>
+                  <input type="text" placeholder="Efternamn" value="Pena">
+                </div>
+                <div class="input-field">
+                  <div class="text">
+                    <p>E-postaddress</p>
+                  </div>
+                  <input type="text" placeholder="namn@email.com" value="eleanor@mail.se">
+                </div>
+                <div class="input-field">
+                  <div class="text">
+                    <p>Mobilnummer</p>
+                  </div>
+                  <input type="text" placeholder="0701234567" value="070 123 4567">
+                </div>
+                <div class="input-field">
+                  <div class="text">
+                    <p>Personnummer</p>
+                  </div>
+                  <input type="text" placeholder="xxxxxx-xxxx" value="840601-xxxx">
+                </div>
+                <div class="input-field department">
+                  <div class="text">
+                    <p>Avdelning</p>
+                  </div>
+                  <input type="text" placeholder="" value="Avdelning A">
+                </div>
+                <div class="input-field">
+                  <div class="text">
+                    <p>Behörighet</p>
+                  </div>
+
+                  <div class="radio-buttons">
+                    <div class="yes-button">
+                      <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1"
+                        checked>
+                      <label class="form-check-label" for="flexRadioDefault1">Tjänsteresor</label>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="ticket-holder col-12">
+                  <div class="text">
+                    <p>Biljetthållare</p>
+                  </div>
+                  <div class="app">
+                    <div class="form-check form-switch">
+                      <p>App</p>
+                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>
+                    </div>
+                    <input type="text" value="070 000 0000">
+                    <i class="fa-regular fa-circle-info"></i>
+                  </div>
+
+                  <div class="travel-card">
+                    <div class="form-check form-switch">
+                      <p>Resekort</p>
+                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>
+                    </div>
+                    <input type="text" value="1406 5555 0120 5555">
+                    <i class="fa-regular fa-circle-info"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bottom-buttons">
+                <button class="clear-button delete-button-text" data-bs-toggle="modal" data-bs-target="#deleteAdminModal"><i class="fa-regular fa-trash-can"></i> Radera admin</button>
+                <div class="save-undo">
+                    <button class="default-outline-button undo"> Ångra ändringar</button>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#createdModal" class="default-button" data>Spara ändringar</button>
+                </div>
+            </div>
+            </div>
+            <div class="form-new active-tickets-section col-6">
+              <p class="active-tickets-title">Aktiva biljetter</p>
+              <div class="active-tickets">
+                <div class="ticket">
+                  <div class="ticket-top">
+                    <p class="ticket-title">356 dagar 7 zoner</p>
+                    <p class="ticket-sub">1600kr</p>
+                </div>
+                <div class="ticket-detials">
+                  <div class="buy-date">
+                    <p>Köpdatum</p>
+                    <p class="sub"> 2021-12-01</p>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+  <script type="module" src="/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</html>
