@@ -26,9 +26,8 @@ if (window.location.pathname.includes("edit-admin")) {
 	const adminStatus = document.querySelector("#adminStatus");
 
 	inputFields.forEach((input) => {
-		input.addEventListener("input", () => {
+		input.addEventListener("change", () => {
 			userDataHasChanged = true;
-			console.log("changed");
 		});
 	});
 	// ----------------

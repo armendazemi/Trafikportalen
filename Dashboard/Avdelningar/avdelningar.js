@@ -159,35 +159,126 @@ if (window.location.pathname === "/Dashboard/Avdelningar/avdelning.html") {
   departmentInformation.addEventListener("click", handleDepartmentInformationDisplay);
 
 }
-const checkAllRadioButton = document.querySelector("#checkAll");
-    const checkBoxes = document.querySelectorAll(".form-check-input");
-    const deleteBulkButton = document.querySelector(".search").querySelector(".delete");
 
-    // Check all card radio buttons
-    checkAllRadioButton.addEventListener("click", () => {
-        if (!checkAllRadioButton.checked) {
-            [...checkBoxes].forEach((radioBtn) => {
-                radioBtn.checked = false;
-                deleteBulkButton.classList.add("disabled");
-            });
-        } else {
-            [...checkBoxes].forEach((radioBtn) => {
-                deleteBulkButton.classList.remove("disabled");
-                radioBtn.checked = true;
-            });
-        }
-    });
+// -----------------
+// EDIT RESENÄR
+// -----------------
+if (window.location.pathname === "/Dashboard/Avdelningar/edit-resenar.html") {
 
-    [...checkBoxes].forEach((radioBtn) => {
-        radioBtn.addEventListener("click", () => {
-            if (radioBtn.checked) {
-                deleteBulkButton.classList.remove("disabled");
-            } else {
-                deleteBulkButton.classList.add("disabled");
-                checkAllRadioButton.checked = false;
-            }
-        });
+  // Resenär Section
+  const inputFields = document.querySelector(".edit-resenar").querySelectorAll("input");
+  let passengerDataHasChanged = false;
+  const ticketHolderSection = document.querySelector(".ticket-holder");
+  const appHolderSwitch = ticketHolderSection.querySelector(".app").querySelector(".form-check-input");
+  const travelCardHolderSwitch = ticketHolderSection.querySelector(".travel-card").querySelector(".form-check-input");
+  const undoChangesButton = document.querySelector(".undo");
+
+  /**
+   * Handles the activation of the input fields for the ticket holders.
+   * @param {Event} event the event that triggered the function
+   */
+  function handleTicketHolderInputActivation(event) {
+    const ticketHolderParent = event.target.parentElement.parentElement;
+    const textInput = ticketHolderParent.querySelector("input[type=text]");
+    if (event.target.checked) {
+      textInput.disabled = false;
+    } else {  
+      textInput.disabled = true;
+    }
+  }
+
+  function undoChanges() {
+    passengerDataHasChanged = false;
+		location.reload();
+  }
+
+
+
+
+  // Event Listeners
+  appHolderSwitch.addEventListener("change", handleTicketHolderInputActivation);
+  travelCardHolderSwitch.addEventListener("change", handleTicketHolderInputActivation);
+  undoChangesButton.addEventListener("click", undoChanges);
+  [...inputFields].forEach(field => field.addEventListener("change", () => {
+    passengerDataHasChanged = true;
+  }));
+
+  window.onbeforeunload = function () {
+		if (passengerDataHasChanged)
+			return "You have unsaved changes. Are you sure you want to leave?";
+	};
+
+
+
+  // Active tickets section
+  const activeTickets = document.querySelectorAll(".ticket");
+  console.log(activeTickets);
+
+  function expandTicketDetails(ticket) {
+    let showMoreButton = ticket.querySelector(".show-more").querySelector("p");
+    let showLessButton = ticket.querySelector(".show-less").querySelector("p");
+    showMoreButton.addEventListener("click", () => {
+      const ticketExtraDetails = ticket.querySelector(".ticket-extra");
+      if (!ticketExtraDetails.classList.contains("show")) {
+        ticketExtraDetails.classList.add("show");
+        ticketExtraDetails.style.maxHeight = "400px";
+        ticketExtraDetails.style.opacity = "1";
+        ticketExtraDetails.style.padding = "24px";
+        ticketExtraDetails.style.marginTop = "-20px";
+        showMoreButton.style.display = "none";
+        showLessButton.style.display = "block";
+      } 
     });
+    showLessButton.addEventListener("click", () => {
+      const ticketExtraDetails = ticket.querySelector(".ticket-extra");
+      if (ticketExtraDetails.classList.contains("show")) {
+        ticketExtraDetails.classList.remove("show");
+        ticketExtraDetails.style.maxHeight = "0";
+        ticketExtraDetails.style.opacity = "0";
+        ticketExtraDetails.style.padding = "0";
+        ticketExtraDetails.style.margin = "0";
+        showMoreButton.style.display = "block";
+      }
+    });
+  }
+
+  [...activeTickets].forEach((ticket) => expandTicketDetails(ticket));
+}
+
+// -----------------
+// BULK DELETE
+// -----------------
+if (document.querySelector("#checkAll")) {
+  const checkAllRadioButton = document.querySelector("#checkAll");
+  const checkBoxes = document.querySelectorAll(".form-check-input");
+  const deleteBulkButton = document.querySelector(".search").querySelector(".delete");
+  
+  // Check all card radio buttons
+  checkAllRadioButton.addEventListener("click", () => {
+      if (!checkAllRadioButton.checked) {
+          [...checkBoxes].forEach((radioBtn) => {
+              radioBtn.checked = false;
+              deleteBulkButton.classList.add("disabled");
+          });
+      } else {
+          [...checkBoxes].forEach((radioBtn) => {
+              deleteBulkButton.classList.remove("disabled");
+              radioBtn.checked = true;
+          });
+      }
+  });
+  
+  [...checkBoxes].forEach((radioBtn) => {
+      radioBtn.addEventListener("click", () => {
+          if (radioBtn.checked) {
+              deleteBulkButton.classList.remove("disabled");
+          } else {
+              deleteBulkButton.classList.add("disabled");
+              checkAllRadioButton.checked = false;
+          }
+      });
+  });
+}
 
 
 
