@@ -135,7 +135,6 @@ if (window.location.pathname === "/Dashboard/Avdelningar/avdelning.html") {
   const departmentInformation = document.querySelector(".department-information");
   const departmentInformationChevronDown = departmentInformation.querySelector(".fa-chevron-down");
   const innerInformationWrapper = departmentInformation.querySelector(".information");
-  console.log(innerInformationWrapper);
 
   function handleDepartmentInformationDisplay() {
     if (innerInformationWrapper.classList.contains("show")) {
@@ -144,6 +143,7 @@ if (window.location.pathname === "/Dashboard/Avdelningar/avdelning.html") {
       innerInformationWrapper.style.opacity = "0";
       innerInformationWrapper.style.padding = "0";
       innerInformationWrapper.style.margin = "0";
+      innerInformationWrapper.style.pointerEvents = "none";
       departmentInformationChevronDown.style.transform = "rotate(0deg)";
     } else {
       innerInformationWrapper.classList.add("show");
@@ -151,6 +151,7 @@ if (window.location.pathname === "/Dashboard/Avdelningar/avdelning.html") {
       innerInformationWrapper.style.opacity = "1";
       innerInformationWrapper.style.padding = "24px";
       innerInformationWrapper.style.marginTop = "32px";
+      innerInformationWrapper.style.pointerEvents = "auto";
       departmentInformationChevronDown.style.transform = "rotate(180deg)";
     }
   }
@@ -212,11 +213,13 @@ if (window.location.pathname === "/Dashboard/Avdelningar/edit-resenar.html") {
 
   // Active tickets section
   const activeTickets = document.querySelectorAll(".ticket");
-  console.log(activeTickets);
+  const activeServiceTickets = document.querySelectorAll(".service-ticket");
 
   function expandTicketDetails(ticket) {
-    let showMoreButton = ticket.querySelector(".show-more").querySelector("p");
-    let showLessButton = ticket.querySelector(".show-less").querySelector("p");
+    const showMoreButton = ticket.querySelector(".show-more").querySelector("p");
+    const showLessButton = ticket.querySelector(".show-less").querySelector("p");
+
+
     showMoreButton.addEventListener("click", () => {
       const ticketExtraDetails = ticket.querySelector(".ticket-extra");
       if (!ticketExtraDetails.classList.contains("show")) {
@@ -242,7 +245,30 @@ if (window.location.pathname === "/Dashboard/Avdelningar/edit-resenar.html") {
     });
   }
 
+  function expandServiceTicketDetails(ticket) {
+    const showMoreButton = ticket.querySelector(".show-more").querySelector("p");
+    const ticketServiceExtraDetails = ticket.querySelector(".ticket-extra");
+    showMoreButton.addEventListener("click", () => {
+      if (!ticketServiceExtraDetails.classList.contains("show")) {
+        ticketServiceExtraDetails.classList.add("show");
+        ticketServiceExtraDetails.style.maxHeight = "400px";
+        ticketServiceExtraDetails.style.opacity = "1";
+        ticketServiceExtraDetails.style.padding = "24px";
+        ticketServiceExtraDetails.style.marginTop = "-20px";
+        showMoreButton.innerHTML = "Ångra";
+      } else {
+        ticketServiceExtraDetails.classList.remove("show");
+        ticketServiceExtraDetails.style.maxHeight = "0";
+        ticketServiceExtraDetails.style.opacity = "0";
+        ticketServiceExtraDetails.style.padding = "0";
+        ticketServiceExtraDetails.style.margin = "0";
+        showMoreButton.innerHTML = "Visa mer";
+      }
+  });
+  }
+
   [...activeTickets].forEach((ticket) => expandTicketDetails(ticket));
+  [...activeServiceTickets].forEach((ticket) => expandServiceTicketDetails(ticket));
 }
 
 // -----------------

@@ -57,77 +57,76 @@
                 </div>
                 <div class="results">
                     <div class="form-new col-6">
-                         <div class="instructions">
-                            <p class="heading">Fyll i den nya resenärens uppgifter</p>
-                            <p class="sub-heading">När du skapat en resenär skickas det ett mail till mottagaren så 
-                                att denne kan skapa ett konot och beställa sina egna biljetter</p>
-                         </div>
-                         <div class="input-fields">
-                            <div class="input-field">
-                                <div class="text">
-                                    <p>Förnamn</p>
-                                    <p class="sub">(Obligatoriskt)</p>
-                                </div>
-                                <input type="text"  placeholder="Förnamn">
-                            </div>
-                            <div class="input-field">
-                                <div class="text">
-                                    <p>Efternamn</p>
-                                    <p class="sub">(Obligatoriskt)</p>
-                                </div>
-                                <input type="text"  placeholder="Efternamn">
-                            </div>
-                            <div class="input-field">
-                                <div class="text">
-                                    <p>E-postaddress</p>
-                                    <p class="sub">(Obligatoriskt)</p>
-                                </div>
-                                <input type="text"  placeholder="namn@email.com">
-                            </div>
-                            <div class="input-field">
-                                <div class="text">
-                                    <p>Mobilnummer</p>
-                                    <p class="sub">(Obligatoriskt)</p>
-                                </div>
-                                <input type="text"  placeholder="0701234567">
-                            </div>
-                            <div class="input-field">
-                                <div class="text">
-                                    <p>Personnummer</p>
-                                    <p class="sub">(Obligatoriskt)</p>
-                                </div>
-                                <input type="text"  placeholder="xxxxxx-xxxx">
-                            </div>
-                            <div class="input-field department">
-                                <div class="text">
-                                    <p>Avdelning</p>
-                                    <p class="sub">(Obligatoriskt)</p>
-                                </div>
-                                <i class="fa-regular fa-magnifying-glass search-icon"></i>
-                                <input type="text" class="col-5" placeholder="Sök på avdelning">
-                            </div>
-                            <div class="input-field">
-                                <div class="text">
-                                    <p>Ska resenären ha tillgång till Tjänsterresor?</p>
-                                </div>
-                              <div class="radio-buttons">
-                                <div class="yes-button">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                    <label class="form-check-label" for="flexRadioDefault1">Ja</label>
-                                </div>
-                               <div class="no-button">
-                                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                   <label class="form-check-label" for="flexRadioDefault1">
-                                       Nej
-                                   </label>
+                        <div class="instructions">
+                           <p class="heading">Fyll i uppgifter för ny resenär</p>
+                        </div>
+                        <div class="input-fields">
+                           <div class="input-field">
+                               <div class="text">
+                                   <p>Förnamn</p>
                                </div>
-                              </div>
-                            </div>
-                            <div class="create-button">
-                                <button type="button" data-bs-toggle="modal" data-bs-target="#createdModal" class="default-button" data> Skapa resenär</button>
-                            </div>
+                               <input type="text"  placeholder="Förnamn">
+                           </div>
+                           <div class="input-field">
+                               <div class="text">
+                                   <p>Efternamn</p>
+                               </div>
+                               <input type="text"  placeholder="Efternamn">
+                           </div>
+                           <div class="input-field">
+                             <div class="text">
+                                 <p>Personnummer</p>
+                             </div>
+                             <input type="text"  placeholder="xxxxxx-xxxx">
                          </div>
-                    </div>
+
+                           <div class="input-field">
+                               <div class="text">
+                                   <p>E-postaddress</p>
+                               </div>
+                               <input type="text"  placeholder="namn@email.com">
+                           </div>
+                           <div class="input-field">
+                               <div class="text">
+                                   <p>Mobilnummer</p>
+                               </div>
+                               <input type="text"  placeholder="0701234567">
+                           </div>
+                           <div class="input-field">
+                             <div class="text">
+                                 <p>Telefonnummer</p>
+                             </div>
+                             <input type="text"  placeholder="0701234567">
+                         </div>
+                           <div class="input-field authorization">
+                            <div class="choose-department">
+                                <p class="add-title">Avdelning</p>
+                                <div class="dropdown">
+                                    <i class="fa-regular fa-magnifying-glass"></i>
+                                    <i class="fa-regular fa-chevron-down"></i>
+                                    <input type="text" placeholder="Sök eller välj avdelning">
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item department">Avdelning A</li>
+                                        <li class="dropdown-item department">Avdelning B</li>
+                                        <li class="dropdown-item department">Avdelning C</li>
+                                    </ul>
+                                </div>
+                            </div>
+                               <div class="text">
+                                   <p>Behörighet</p>
+                               </div>
+                             <div class="radio-buttons">
+                               <div class="organization-button">
+                                   <input class="form-check-input" type="checkbox" name="organization" id="organization">
+                                   <label class="form-check-label" for="organization">Tjänsteresor</label>
+                               </div>
+                             </div>
+                           </div>
+                           <div class="create-button">
+                               <button type="button" data-bs-toggle="modal" data-bs-target="#createdModal" class="default-button" data> Lägg till resenär</button>
+                           </div>
+                        </div>
+                   </div>
                 </div>
             </div>
         </div>

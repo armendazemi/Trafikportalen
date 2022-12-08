@@ -37,8 +37,8 @@
         <!-- PAGE LINKS LEFT SIDE -->
         <div class="selections col-2">
           <div class="links">
-            <a href="#" class="page-link-item"><i class="fa-regular fa-user-gear"></i> Administratörer</a>
-            <a href="#" class="page-link-item"><i class="fa-regular fa-grid-2"></i>Avdelningar</a>
+            <a href="../Administratörer/start.html" class="page-link-item"><i class="fa-regular fa-user-gear"></i> Administratörer</a>
+            <a href="./start.html" class="page-link-item active"><i class="fa-regular fa-grid-2"></i>Avdelningar</a>
             <a href="#" class="page-link-item"><i class="fa-regular fa-user-group"></i>Resenärer</a>
             <a href="#" class="page-link-item"><i class="fa-regular fa-ticket"></i>Beställ biljett</a>
             <a href="#" class="page-link-item"><i class="fa-regular fa-bell"></i>Evenemang</a>
@@ -57,6 +57,10 @@
             <div class="title-and-sub">
               <h1 class="title">Eleanor Pena</h1>
               <a href="#" class="back"><i class="fa-solid fa-arrow-left"></i> Tillbaka till resenärer</a>
+            </div>
+            <div class="buttons">
+              <button type="button" class="default-button"><i class="fa-solid fa-plus"></i> Lägg till ny biljett</button>
+              <button type="button" class="default-button"><i class="fa-solid fa-plus"></i> Lägg till ny tjänsteresa</button>
             </div>
           </div>
           <div class="results">
@@ -149,10 +153,13 @@
                 </div>
               </div>
             </div>
+
+
+            <!-- ACTIVE TICKETS  -->
             <div class="form-new active-tickets-section col-6">
               <p class="active-tickets-title">Aktiva biljetter</p>
               <div class="active-tickets">
-                <div class="ticket">
+                <div class="ticket ">
                   <div class="ticket-top col-12">
                     <p class="ticket-title">356 dagar 7 zoner</p>
                     <p class="ticket-sub">1600kr</p>
@@ -184,8 +191,37 @@
                     </div>
                   </div>
                 </div>
+                <div class=" service-ticket">
+                  <div class="ticket-top col-12">
+                    <p class="ticket-title">Tjänsteresa</p>
+                    <p class="ticket-sub">1600kr</p>
+                  </div>
+                  <div class="ticket-details">
+                    <div class="buy-date">
+                      <p class="title">Köpdatum</p>
+                      <p class="sub"> 2021-12-01</p>
+                    </div>
+                    <div class="validity">
+                      <p class="title">Giltig t o m</p>
+                      <p class="sub"> 2021-12-01</p>
+                    </div>
+                    <div class="show-more">
+                      <p>Ändra kreditgräns</p>
+                    </div>
+                  </div>
+                  <div class="ticket-extra">
+                    <div class="new-credit">
+                      <p class="title">Ny kreditgräns</p>
+                      <input type="text" placeholder="Fyll i maxbelopp SEK/mån">
+                      <button class="default-button">Spara ändringar</button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+            <!-- ACTIVE TICKETS END -->
+
+            <!-- OLD TICKETS  -->
             <div class="form-new old-tickets col-6">
               <p class="active-tickets-title">Biljetthistorik</p>
               <div class="old-tickets">
@@ -318,7 +354,11 @@
                   </div>
                 </div>
               </div>
+              <div class="show-more-old-tickets">
+                <p>Visa fler</p>
+              </div>
             </div>
+            <!-- OLD TICKETS END -->
           </div>
         </div>
 

@@ -81,6 +81,13 @@ input {
     border-color: $primary ;
   }
 }
+.form-check-input[type=checkbox] {
+  background-color: white;
+  border: 1px solid $secondary200;
+  &:checked {
+    background-color: $primary;
+  }
+}
 .btn {
     &:focus {
         box-shadow: none;
