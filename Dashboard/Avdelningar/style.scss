@@ -171,6 +171,20 @@
     display: flex;
     align-items: center;
   }
+  .department-admins {
+    display: flex;
+    align-items: center;
+    p {
+      padding: 0;
+    }
+    .amount {
+      background: $primary100;
+      padding: 2px 8px;
+      color: $primary600;
+      border-radius: 16px;
+      margin-left: 4px;
+    }
+  }
 
   &:nth-child(odd) {
     background: $secondary100;
@@ -403,6 +417,7 @@
     background-color: white;
     border-radius: 8px;
     transition: all 300ms ease-out;
+    pointer-events: none;
     .fa-chevron-down {
       transition: all 0.3s ease;
     }
@@ -518,7 +533,7 @@
       color: $primary900;
       font-weight: 500;
     }
-    .ticket {
+    .ticket, .service-ticket {
       background: $secondary50;
       border-radius: 8px;
       border-top: 8px solid $primary600;
@@ -567,12 +582,42 @@
         opacity: 0;
         padding: 0;
       }
+      .new-credit {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .title {
+          margin-bottom: 8px;
+        }
+        input {
+          width: 100%;
+        }
+        button {
+          align-self: flex-end;
+          margin-top: 24px;
+        }
+
+      }
     }
   }
   .old-tickets {
     .ticket {
       background: $neutral50;
       border-top-color: $neutralSecondary600;
+    }
+  }
+
+  .show-more-old-tickets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    width: 100%;
+    p{
+      cursor: pointer;
+      color: $primary600;
+      font-size: 16px;
+      font-weight: 500;
     }
   }
 }

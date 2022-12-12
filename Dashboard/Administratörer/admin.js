@@ -42,7 +42,6 @@ if (window.location.pathname.includes("edit-admin")) {
 	//-----------------------
 	// Authorization Section
 	//-----------------------
-	const dropdownAdmin = document.querySelector(".dropdown.admin");
 	const dropdownAdminButton = document.querySelector(".dropdown.admin button");
 	const chevdownAdmin = dropdownAdminButton.querySelector(".fa-chevron-down");
 	const dropdownMenuAdmin = document.querySelector(
@@ -229,49 +228,58 @@ if (window.location.pathname.includes("edit-admin")) {
 	const deleteAdminModal = document.querySelector(".delete-admin-modal");
 	const adminSearch = document.querySelector(".search-for-admin");
 	const adminSearchChevDown = adminSearch.querySelector(".fa-chevron-down");
-	const deleteModaldropdownResults = deleteAdminModal.querySelector(".dropdown-results");
+	const deleteModalDropdownResults = deleteAdminModal.querySelector(".dropdown-results");
+	const deleteModalDropdownItems = deleteModalDropdownResults.querySelectorAll(".dropdown-item");
 	const deleteAdminModalFooter = deleteAdminModal.querySelector(".modal-footer");
     const adminSearchInput = adminSearch.querySelector("input");
 
     function openDeleteModalDropdown() {
-			if (!deleteModaldropdownResults.classList.contains("show")) {
-				deleteModaldropdownResults.style.display = "block";
-				deleteAdminModalFooter.style.marginTop = 24 + deleteModaldropdownResults.clientHeight + "px";
-				deleteModaldropdownResults.classList.add("show");
-				adminSearchChevDown.style.transform = "rotate(180deg)";
-			} else {
-				deleteModaldropdownResults.style.display = "none";
-				deleteAdminModalFooter.style.marginTop = "8px";
-				deleteModaldropdownResults.classList.remove("show");
-				adminSearchChevDown.style.transform = "rotate(0deg)";
-			}
+		if (!deleteModalDropdownResults.classList.contains("show")) {
+			deleteModalDropdownResults.style.display = "block";
+			deleteAdminModalFooter.style.marginTop = 24 + deleteModalDropdownResults.clientHeight + "px";
+			deleteModalDropdownResults.classList.add("show");
+			adminSearchChevDown.style.transform = "rotate(180deg)";
+		} else {
+			deleteModalDropdownResults.style.display = "none";
+			deleteAdminModalFooter.style.marginTop = "8px";
+			deleteModalDropdownResults.classList.remove("show");
+			adminSearchChevDown.style.transform = "rotate(0deg)";
+		}
     }
 
     function handleAdminSearch(event) {
-        if (!deleteModaldropdownResults.classList.contains("show")) {
-					openDeleteModalDropdown();
+        if (!deleteModalDropdownResults.classList.contains("show")) {
+			openDeleteModalDropdown();
         }
         // Close when input is empty
         if (event.target.value === "") {
-					openDeleteModalDropdown();
+			openDeleteModalDropdown();
         }
         let searchTerm = event.target.value.toLowerCase();
-        deleteModaldropdownResults.querySelectorAll(".dropdown-item").forEach((item) => {
+		console.log(searchTerm);
+        deleteModalDropdownResults.querySelectorAll(".dropdown-item").forEach((item) => {
             let adminName = item.innerHTML.toLowerCase();
+			console.log("adminName");
             if (adminName.includes(searchTerm) && searchTerm !== "") {
                 item.style.backgroundColor = "#F8FCFD";
-								item.style.display = "block";
+				item.style.display = "block";
             } else if(searchTerm === "") {
                 item.style.backgroundColor = "white";
-								item.style.display = "block";
+				item.style.display = "block";
             } else {
-								item.style.display = "none";
-						}
+				item.style.display = "none";
+			}
 
         });
     }
-		adminSearchChevDown.addEventListener("click", openAdminDropdownMenu);
-		adminSearchInput.addEventListener("input", handleAdminSearch);
+	adminSearchChevDown.addEventListener("click", openDeleteModalDropdown);
+	adminSearchInput.addEventListener("input", handleAdminSearch);
+	deleteModalDropdownItems.forEach((item) => {
+		item.addEventListener("click", () => {
+		  adminSearchInput.value = item.innerHTML;
+		  openDeleteModalDropdown();
+		});
+	  });
 	// ----------------------------
 	// -------EDIT ADMIN END-------
 	// ----------------------------
