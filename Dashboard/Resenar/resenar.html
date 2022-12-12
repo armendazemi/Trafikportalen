@@ -57,10 +57,10 @@
           <div class="title-and-export">
             <div class="title-and-sub">
               <h1 class="title">Resenär</h1>
-              <p>Här kan du lägga till, redigera och ta bort resenärer</p>
+              <p class="sub">Här kan du lägga till, redigera och ta bort resenärer</p>
             </div>
             <div class="buttons">
-              <a type="button" class="default-button"><i class="fa-solid fa-plus"></i>Importera
+              <a type="button" class="default-button"><i class="fa-regular fa-file-import"></i>Importera
                 renenärer</a>
               <a href="ny-resenar.html" e="button" class="default-button"><i class="fa-solid fa-plus"></i>Skapa ny
                 resenär</a>
@@ -72,15 +72,17 @@
           <div class="search-and-filters">
             <div class="existing-users">
               <p class="heading">Befintliga resenärer</p>
-              <p class="user-count"> 3 användare</p>
+              <p class="user-count"> 120 resenärer</p>
             </div>
 
             <div class="search col-12">
               <i class="fa-regular fa-magnifying-glass search-icon"></i>
               <input type="text" class="col-5" placeholder="Sök på namn eller avdelning">
               <button class="default-outline-button filter"><i class="fa-regular fa-bars-filter"></i>FILTER</button>
-              <button class="default-outline-button disabled export"><i
-                  class="fa-solid fa-arrow-up-right-from-square"></i> EXPORTERA</button>
+              <div class="delete-export">
+                <button class="default-outline-button disabled delete"><i class="fa-regular fa-trash-can"></i>Radera</button>
+                <button class="default-outline-button disabled export"><i class="fa-solid fa-arrow-up-right-from-square"></i> EXPORTERA</button>
+              </div>
             </div>
 
 
@@ -94,11 +96,11 @@
                   <input class="form-check-input" type="checkbox" value="" id="checkAll">
                   <p> Namn<i class="fa-light fa-arrow-up-arrow-down"></i></p>
                 </div>
-                <p class="col-1">Avdelning</p>
-                <p class="col-2">Periodbiljetter</p>
+                <p class="col-1">Biljetter</p>
                 <p class="col-2">Tjänsteresor</p>
-                <p class="col-1">Biljettbärare</p>
-                <p class="col-1">Kontostatus</p>
+                <p class="col-2">Biljettbärare</p>
+                <p class="col-1">Status</p>
+                <p class="col-1">Avdelning</p>
                 <p class="col-1">Skapad</p>
 
               </div>
@@ -117,7 +119,6 @@
                   <p class="col-1">2021-12-01</p>
                   <div class="delete-and-edit">
                     <i class="fa-regular fa-trash-can"></i>
-                    <i class="fa-light fa-pen"></i>
                   </div>
                 </div>
                 
