@@ -756,6 +756,47 @@ header {
   color: #526667;
 }
 
+.service-ticket .ticket-selection {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.service-ticket .credit-limit,
+.service-ticket .recipient,
+.service-ticket .mobile {
+  margin-top: 24px;
+}
+.service-ticket .credit-limit p,
+.service-ticket .recipient p,
+.service-ticket .mobile p {
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #0B424A;
+}
+.service-ticket .recipient {
+  position: relative;
+}
+.service-ticket .recipient input {
+  padding-left: 40px;
+}
+.service-ticket .recipient .fa-magnifying-glass {
+  position: absolute;
+  font-size: 16px;
+  top: 35px;
+  left: 16px;
+  z-index: 1000;
+  color: #354A4B;
+}
+.service-ticket .recipient .fa-chevron-down {
+  position: absolute;
+  font-size: 16px;
+  top: 35px;
+  right: 16px;
+  z-index: 1000;
+  color: #354A4B;
+}
+
 .ticket-success-wrapper {
   margin: auto;
   background: #FFFFFF;

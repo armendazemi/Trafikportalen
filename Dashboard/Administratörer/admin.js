@@ -145,6 +145,7 @@ if (window.location.pathname.includes("edit-admin")) {
 			department.appendChild(xIcon);
 			authTags.appendChild(department);
 			addMoreDepartmentsDropDownMenu.removeChild(item);
+			searchForDepartmentInput.value = "";
 			handleRemoveTag(xIcon);
 			handleDepartmentDropdownMenu();
 		});

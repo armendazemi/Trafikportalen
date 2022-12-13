@@ -526,6 +526,48 @@
     }
   }
 }
+
+//---------------------------------
+// ---------Service ticket---------
+//---------------------------------
+.service-ticket {
+  .ticket-selection {
+    height: fit-content;
+  }
+  .credit-limit,
+  .recipient,
+  .mobile {
+    margin-top: 24px;
+    p {
+      margin-bottom: 4px;
+      font-size: 12px;
+      font-weight: 500;
+      color: $primary900;
+    }
+  }
+  .recipient {
+    position: relative;
+    input {
+      padding-left: 40px;
+    }
+    .fa-magnifying-glass{
+      position: absolute;
+      font-size: 16px;
+      top: 35px;
+      left: 16px;
+      z-index: 1000;
+      color: $secondary800;
+    }
+    .fa-chevron-down {
+      position: absolute;
+      font-size: 16px;
+      top: 35px;
+      right: 16px;
+      z-index: 1000;
+      color: $secondary800;
+    }
+  }
+}
 //---------------------------------
 // ---------Ticket success---------
 //---------------------------------
