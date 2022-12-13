@@ -48,6 +48,14 @@ input:focus-visible {
   border-color: #17A0B4;
 }
 
+.form-check-input[type=checkbox] {
+  background-color: white;
+  border: 1px solid #C8D4D6;
+}
+.form-check-input[type=checkbox]:checked {
+  background-color: #17A0B4;
+}
+
 .btn:focus {
   box-shadow: none;
 }

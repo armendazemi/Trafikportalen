@@ -127,10 +127,16 @@
   margin: 24px 64px;
   .ticket-selection,
   .cart{
+    margin-top: 32px;
     background-color: white;
     padding: 48px;
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(16, 24, 40, 0.08);
+    .tickets {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
   }
   .ticket-selection {
     .title {
@@ -148,10 +154,10 @@
     }
     .destionation-inputs {
       display: flex; 
-      flex-direction: column;
-      gap: 8px;
+      gap: 16px;
       .input-wrapper {
         position: relative;
+        flex: 1;
         label {
           color: $primary900;
           font-size: 12px;
@@ -186,8 +192,8 @@
     }
 
     .ticket-type {
-      .dropdown {
-        button {
+      .dropdown{
+        button{
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -201,8 +207,14 @@
           p {
             margin: 0;
           }
+          i {
+            transition: all ease-out 300ms;
+          }
         }
       }
+      .dropdown-menu{
+        width: 100% !important;
+      }      
     }
 
     .ticket-recipient {
@@ -392,15 +404,130 @@
         font-weight: 500;
       }
     }
-    button {
+    .default-button {
       margin-top: 32px;
     }
   }
 }
 
-
 //---------------------------------
-// ---------Ticket success----------
+// --------- Send ticket ----------
+//---------------------------------
+.send-ticket {
+  .ticket-recipient {
+    .title-big {
+      font-size: 16px;
+      font-weight: 500;
+      color: $primary900;
+    }
+    .existing,
+    .temporary {
+      margin-top: 16px;
+      background-color: $primary50;
+      padding: 24px;
+      margin-bottom: 40px;
+      .input-wrapper {
+       position: relative;
+       label {
+          margin-bottom: 5px;
+          font-size: 12px;
+          font-weight: 500;
+       }
+       input {
+        padding-left: 40px;
+       }
+       .fa-magnifying-glass {
+          position: absolute;
+          font-size: 16px;
+          top: 40px;
+          left: 16px;
+          z-index: 100;
+          color: $secondary800;
+        }
+      }
+      .radio-buttons {
+        .title {
+          margin-bottom: 5px;
+          font-size: 12px;
+          font-weight: 500;
+        }
+      }
+      .bottom-wrapper {
+        display: flex;
+        gap: 34px;
+        margin-top: 24px;
+        .radio-buttons {
+          .buttons {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+          }
+        }
+        .input-field {
+          width: 100%;
+          input {
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+  }
+  .temporary {
+    .full-name {
+      display: flex;
+      gap: 24px;
+      .input-wrapper {
+        flex: 1;
+      }
+    }
+  }
+
+  .message {
+    p {
+      margin-bottom: 4px;
+      font-size: 12px;
+      font-weight: 500;
+      color: $primary900;
+    }
+    textarea {
+      resize: none;
+      padding: 7px 10px;
+      border: 1px solid $secondary100;
+      border-radius: 8px;
+    }
+  }
+  .reference {
+    margin-top: 32px;
+    p {
+      margin-bottom: 4px;
+      font-size: 12px;
+      font-weight: 500;
+      color: $primary900;
+    }
+  }
+}
+
+.company-details{
+  display: flex;
+  gap: 16px;
+  background-color: $primary50;
+  margin-top: 16px;
+  padding: 24px;
+  .left {
+    p {
+      font-weight: 400;
+      color: $primary900;
+    }
+  }
+  .right {
+    p {
+      font-weight: 400;
+      color: $secondary600;
+    }
+  }
+}
+//---------------------------------
+// ---------Ticket success---------
 //---------------------------------
 .ticket-success-wrapper {
   margin: auto;

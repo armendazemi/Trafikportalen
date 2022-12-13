@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Fontawesome (icons) -->
+  <script src="https://kit.fontawesome.com/6c1e67d703.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="container-fluid">
+    <div class="row h-100">
+      <div class="left-side-header col-2">
+        <img src="../../resources/images/portal-logo-blue.svg" alt="">
+        <p>Företag</p>
+      </div>
+      <div class="user col-10">
+        <a href="#">
+          <p class="username">Emmy Nilson</p>
+          <img src="../../resources/images/user-prof.png" alt="" class="user-profile-pic">
+        </a>
+      </div>
+    </div>
+  </header>
+  <div class="wrappers container-fluid">
+    <div class="row">
+      <!-- PAGE LINKS LEFT SIDE -->
+      <div class="selections col-2">
+        <div class="links">
+          <a href="#" class="page-link-item"><i class="fa-regular fa-user-gear"></i> Administratörer</a>
+          <a href="#" class="page-link-item"><i class="fa-regular fa-grid-2"></i>Avdelningar</a>
+          <a href="#" class="page-link-item"><i class="fa-regular fa-user-group"></i>Resenärer</a>
+          <a href="#" class="page-link-item active"><i class="fa-regular fa-ticket"></i>Beställ biljett</a>
+          <a href="#" class="page-link-item"><i class="fa-regular fa-bell"></i>Evenemang</a>
+          <a href="#" class="page-link-item"><i class="fa-regular fa-chart-simple"></i>Statistik &
+            Rapporter</a>
+        </div>
+        <div class="bottom-links">
+          <button type="button" class="clear-button"><i class="fa-regular fa-circle-question"></i>Support</button>
+          <button type="button" class="clear-button"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logga
+            ut</button>
+        </div>
+      </div>
+      <!-- MAIN CONTENT  -->
+      <div class="main-content send-ticket offset-2 col-10">
+        <div class="top-text">
+          <h1 class="title">Skicka biljett </h1>
+          <a href="#" class="back"><i class="fa-solid fa-arrow-left"></i> Tillbaka till biljetter</a>
+        </div>
+
+        <div class="ticket-wrapper">
+          <!-- TICKET OPTIONS -->
+          <div class="ticket-selection col-7">
+            <p class="title">Skapa biljett</p>
+            <p class="sub">Välj hållplatser att åka mellan</p>
+            <div class="destionation-inputs">
+              <div class="input-wrapper">
+                <label for="from">Från</label>
+                <i class="fa-regular fa-location-dot"></i>
+                <input type="text" id="from" placeholder="Exempel “Jönköping Resecentrum”">
+              </div>
+              <div class="input-wrapper">
+                <label for="to">Till</label>
+                <i class="fa-regular fa-location-dot"></i>
+                <input type="text" id="to" placeholder="Exempel “Jönköping Resecentrum”">
+              </div>
+            </div>
+
+            <div class="zones">
+              <p>1 zon</p>
+            </div>
+
+            <div class="ticket-type">
+              <div class="text">
+                <p>Välj biljettyp</p>
+              </div>
+              <div class="dropdown ">
+                <button class="btn btn-secondary dropdown-toggle" type="button">
+                  <p id="salaryAdmin">Välj mellan biljettalternativ</p>
+                  <i class="fa-regular fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item">365 dagar</li>
+                  <li class="dropdown-item">30 dagar</li>
+                  <li class="dropdown-item">7 dagar</li>
+                  <li class="dropdown-item">72 timmar</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="ticket-recipient">
+              <div class="text">
+                <p class="title-big">Mottagare</p>
+              </div>
+              <div class="radio-buttons">
+                <div class="buttons">
+                  <div class="form-check form-check">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                      value="option1">
+                    <label class="form-check-label" for="inlineRadio1">Befintlig resenär</label>
+                  </div>
+
+                  <div class="existing ">
+                    <div class="input-wrapper">
+                      <label for="from">Mottagare</label>
+                      <i class="fa-regular fa-magnifying-glass"></i>
+                      <input type="text" id="from" placeholder="Sök resenär" value="Lisa Karlsson">
+                    </div>
+
+                    <div class="bottom-wrapper">
+                      <div class="radio-buttons">
+                        <p class="title">Biljetthållare</p>
+                        <div class="buttons">
+                          <div class="form-check form-check">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                              value="option1">
+                            <label class="form-check-label" for="inlineRadio1">App</label>
+                          </div>
+                          <div class="form-check form-check">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                              value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Resekort</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="input-field">
+                        <div class="text">
+                          <p class="title"> Resekort</p>
+                          <p class="small">(Obligatoriskt)</p>
+                        </div>
+                        <input type="text" placeholder="070 123 4567">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-check form-check">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                      value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Ange tillfällig
+                      resenär</label>
+                  </div>
+                  <div class="temporary">
+                    <div class="full-name">
+                      <div class="input-wrapper">
+                        <label for="from">Förnamn</label>
+                        <i class="fa-regular fa-magnifying-glass"></i>
+                        <input type="text" id="from" placeholder="Sök resenär" value="Lisa">
+                      </div>
+                      <div class="input-wrapper">
+                        <label for="from">Efternamn</label>
+                        <i class="fa-regular fa-magnifying-glass"></i>
+                        <input type="text" id="from" placeholder="Sök resenär" value="Karlsson">
+                      </div>
+                    </div>
+
+                    <div class="bottom-wrapper">
+                      <div class="radio-buttons">
+                        <p class="title">Biljetthållare</p>
+                        <div class="buttons">
+                          <div class="form-check form-check">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                              value="option1">
+                            <label class="form-check-label" for="inlineRadio1">App</label>
+                          </div>
+                          <div class="form-check form-check">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                              value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Resekort</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="input-field">
+                        <div class="text">
+                          <p class="title"> Resekort</p>
+                          <p class="small">(Obligatoriskt)</p>
+                        </div>
+                        <input type="text" placeholder="070 123 4567">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="message">
+              <p>Meddelande</p>
+              <div class="input-field">
+                <textarea name="message" id="message" cols="30" rows="4"
+                  placeholder="Skriv ett meddelande till mottagaren" style="width: 100%;"></textarea>
+              </div>
+            </div>
+
+            <div class="reference">
+              <p >Referens</p>
+              <div class="input-field">
+                <input type="text" placeholder="Skriv en referens">
+              </div>
+            </div>
+
+            <div class="company-details">
+              <div class="left">
+                <p>Företag:</p>
+                <p>Fakturaaddress:</p>
+              </div>
+              <div class="right">
+                <p>HL Design</p>
+                <p>Kungsgatan 3 <br>352 30 Växjö</p>
+              </div>
+            </div>
+
+
+            <div class="total-amount">
+              <p class="title">Totalt exkl. moms</p>
+              <p class="price">0.00 kr</p>
+            </div>
+
+            <div class="add-to-cart">
+              <button class="default-button">Skapa biljett</button>
+            </div>
+          </div>
+          <!-- TICKET OPTIONS END -->
+
+
+          <div class="cart col-4">
+            <p class="title">Biljetter</p>
+            <p class="your-tickets">Dina skapade biljetter</p>
+            <p class="empty">Din varukorg är tom</p>
+
+            <div class="tickets">
+              <div class="ticket">
+                <div class="ticket-top">
+                  <p>365 dagar Jönköping Zon 1</p>
+                  <i class="fa-regular fa-x"></i>
+                </div>
+                <div class="destination">
+                  <p>Jönköping Station</p>
+                  <p>Odensjö</p>
+                </div>
+                <div class="ticket-bottom">
+                  <div class="users">
+                    <i class="fa-regular fa-user"></i>
+                    <p>1</p>
+                  </div>
+                  <p class="price"> 100.94kr</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="total-ticket-price">
+              <div class="without-tax">
+                <p>Summa exkl. moms</p>
+                <p>100.94kr</p>
+              </div>
+              <div class="tax">
+                <p>Moms</p>
+                <p>6.60 kr</p>
+              </div>
+              <div class="total">
+                <p>Att betala</p>
+                <p>107.00 kr</p>
+              </div>
+            </div>
+
+            <a href="./success.html" class="default-button">Godkänn betalning</a>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</html>
