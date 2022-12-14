@@ -25,6 +25,10 @@ function openAdminDropdownMenu() {
 	}
 }
 
+/**
+ * On search, filter the dropdown results.
+ * @param {Event} event the event that triggered the function
+ */
 function handleAdminSearch(event) {
 	if (!deleteModaldropdownResults.classList.contains("show")) {
 		openAdminDropdownMenu();
@@ -48,6 +52,8 @@ function handleAdminSearch(event) {
     }
 	});
 }
+
+// Event listeners
 adminSearchChevDown.addEventListener("click", openAdminDropdownMenu);
 adminSearchInput.addEventListener("input", handleAdminSearch);
 dropdownItems.forEach((item) => {

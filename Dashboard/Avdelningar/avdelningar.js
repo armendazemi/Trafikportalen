@@ -3,7 +3,9 @@
 // -----------------
 // SALARY ADMIN
 // -----------------
+
 if (window.location.pathname.includes("ny")) {
+  // New department page
   const salaryAdmin = document.querySelector(".salary-admin");
   const dropdownSalaryAdminButton = salaryAdmin.querySelector("button");
   const salaryDropdownMenu = salaryAdmin.querySelector(".dropdown-menu");
@@ -27,6 +29,10 @@ if (window.location.pathname.includes("ny")) {
       }
   }
 
+  /**
+   * Selects the salary admin and closes the dropdown menu.
+   * @param {HTMLObject} item the item that was clicked
+   */
   function selectSalaryAdmin(item) {
     handleSalaryAdminDropdown();
     currentSalaryAdmin.innerHTML = item.innerHTML;
@@ -136,6 +142,7 @@ if (window.location.pathname === "/Dashboard/Avdelningar/avdelning.html") {
   const departmentInformationChevronDown = departmentInformation.querySelector(".fa-chevron-down");
   const innerInformationWrapper = departmentInformation.querySelector(".information");
 
+  // Handles the top dropdown detailed department information.
   function handleDepartmentInformationDisplay() {
     if (innerInformationWrapper.classList.contains("show")) {
       innerInformationWrapper.classList.remove("show");
