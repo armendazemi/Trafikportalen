@@ -424,6 +424,17 @@ header {
 .card-info .user-name {
   margin-left: 30px;
 }
+.card-info .department {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.card-info .department p {
+  padding: 0;
+}
+.card-info .department .tag {
+  background-color: #E8F4F6;
+}
 .card-info .delete-and-edit {
   margin-left: auto;
   margin-right: 16px;
@@ -625,6 +636,14 @@ header {
 }
 .bottom-buttons .default-outline-button {
   text-transform: none;
+}
+
+.new-admin .current-auth {
+  max-height: 0px;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+  transition: all ease-out 300ms;
 }
 
 .created-modal .modal-dialog {
