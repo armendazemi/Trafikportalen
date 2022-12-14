@@ -20,10 +20,7 @@ if (window.location.pathname.includes("edit-admin")) {
   // --------------------------
   let userDataHasChanged = false;
   const newForm = document.querySelector(".form-new");
-  const inputFields = newForm
-    .querySelector(".input-fields")
-    .querySelectorAll("input");
-  const adminStatus = document.querySelector("#adminStatus");
+  const inputFields = newForm.querySelector(".input-fields").querySelectorAll("input");
 
   inputFields.forEach((input) => {
     input.addEventListener("change", () => {
@@ -44,11 +41,8 @@ if (window.location.pathname.includes("edit-admin")) {
   //-----------------------
   const dropdownAdminButton = document.querySelector(".dropdown.admin button");
   const chevdownAdmin = dropdownAdminButton.querySelector(".fa-chevron-down");
-  const dropdownMenuAdmin = document.querySelector(
-    ".dropdown.admin .dropdown-menu"
-  );
+  const dropdownMenuAdmin = document.querySelector(".dropdown.admin .dropdown-menu");
   const currentAuthorization = document.querySelector(".current-auth");
-  const createButton = document.querySelector(".create-button");
 
   /**
    * Handles the display of the admin dropdown menu and animation of the chevdown icon.
@@ -70,29 +64,26 @@ if (window.location.pathname.includes("edit-admin")) {
     }
   }
 
+  /**
+   * Selecting admin type.
+   */
   function handleAdminSelection(event) {
     dropdownAdminButton.querySelector("p").innerText = event.target.innerHTML;
     openAdminDropdownMenu();
   }
 
+  //---------------------------
   // Add new department section
-  const currentAuth = document.querySelector(".current-auth");
+  //--------------------------
   const addMoreDepartments = document.querySelector(".add-more-departments");
-  const addMoreDepartmentsDropdownWrapper = document.querySelector(
-    ".add-more-departments .dropdown"
-  );
-  const addMoreDepartmentsDropDownMenu = document.querySelector(
-    ".add-more-departments .dropdown-menu"
-  );
-  const dropDownItemsDepartment = document.querySelectorAll(
-    ".add-more-departments .dropdown-menu .dropdown-item"
-  );
+  const addMoreDepartmentsDropdownWrapper = document.querySelector(".add-more-departments .dropdown");
+  const addMoreDepartmentsDropDownMenu = document.querySelector(".add-more-departments .dropdown-menu");
+  const dropDownItemsDepartment = document.querySelectorAll(".add-more-departments .dropdown-menu .dropdown-item");
   const addDepartmentButton = document.querySelector(".add-department-btn");
   const searchForDepartmentInput = addMoreDepartments.querySelector("input");
   const addTitle = document.querySelector(".add-title");
   const bottomButtons = document.querySelector(".bottom-buttons");
-  const openDropdownMenuButton =
-    addMoreDepartmentsDropdownWrapper.querySelector(".fa-chevron-down");
+  const openDropdownMenuButton = addMoreDepartmentsDropdownWrapper.querySelector(".fa-chevron-down");
   const authTags = document.querySelector(".auth-tags");
 
   /**
@@ -127,7 +118,7 @@ if (window.location.pathname.includes("edit-admin")) {
   }
 
   /**
-   * Handles adding a new department to the authTags div.
+   * Handles adding new department to the auth tags.
    * @param {HTMLObjectElement} item - The department that is to be added.
    */
   function handleAddDepartment(item) {
@@ -150,6 +141,10 @@ if (window.location.pathname.includes("edit-admin")) {
     });
   }
 
+  /**
+   * Searching for a department, filter and show the departments that matches the search term.
+   * @param {Event} event the event that is triggered when the user types in the search input.
+   */
   function handleDepartmentSearch(event) {
     if (!addMoreDepartmentsDropDownMenu.classList.contains("show")) {
       handleDepartmentDropdownMenu();
@@ -323,25 +318,76 @@ if (window.location.pathname.includes("start")) {
   });
 }
 
+
+  // ----------------------------
+  // -------   NEW ADMIN  -------
+  // ----------------------------
 if (window.location.pathname.includes("ny")) {
   const addAsDepartmentAdminButton = document.querySelector("#departmentAdminRadioButton");
   const currentAuth = document.querySelector(".current-auth");
+  const currentAuthText = currentAuth.querySelector(".text");
+  const authTags = document.querySelector(".auth-tags");
+
+  const addMoreDepartmentWrapper = document.querySelector(".add-more-departments");
+  const moreDepartmentsDropdown = addMoreDepartmentWrapper.querySelector(".dropdown");
+  const createAdminBtnWrapper = document.querySelector(".add-admin-btn-wrapper");
+
+  // New department form
+  const openNewDepartmentFormBtn = document.querySelector("#createNewDepartmentBtn");
+  const newDepartmentForm = document.querySelector(".new-department-form");
+  const saveNewDepartmentBtn = newDepartmentForm.querySelector(".save");
+  const undoNewDepartmentBtn = newDepartmentForm.querySelector(".undo");
+  const newDepartmentTitle = document.querySelector(".new-department-title");
 
   function handleDisplayDepartmentDropdownMenu() {
     const checkbox = this;
     if (checkbox.checked) {
       currentAuth.style.maxHeight = "400px";
       currentAuth.style.paddingBottom = "24px";
+      currentAuth.style.marginTop = "24px";
       currentAuth.style.opacity = "1";
+      moreDepartmentsDropdown.style.display = "block";
     } else {
       currentAuth.style.maxHeight = "0px";
       currentAuth.style.paddingBottom = "0px";
       currentAuth.style.opacity = "0";
+      currentAuth.style.margin = "0";
+      moreDepartmentsDropdown.style.display = "none";
     }
   }
 
-  addAsDepartmentAdminButton.addEventListener(
-    "change",
-    handleDisplayDepartmentDropdownMenu
-  );
+  /**
+   * Show the new department form.
+   */
+  function showNewDepartmentForm () {
+    newDepartmentTitle.style.display = "block";
+    newDepartmentForm.style.opacity = "1";
+    newDepartmentForm.style.padding= "24px";
+    newDepartmentForm.style.maxHeight = "1000px";
+    newDepartmentForm.style.pointerEvents = "auto";
+    openNewDepartmentFormBtn.style.display = "none";
+    currentAuthText.style.display = "none";
+    addMoreDepartmentWrapper.style.display = "none";
+    authTags.style.display = "none";
+    createAdminBtnWrapper.style.marginTop = 160 +24 + "px";
+  }
+
+  function closeNewDepartmentForm() {
+    newDepartmentTitle.style.display = "none";
+    newDepartmentForm.style.opacity = "0";
+    newDepartmentForm.style.padding= "0px";
+    newDepartmentForm.style.maxHeight = "0px";
+    newDepartmentForm.style.pointerEvents = "none";
+    openNewDepartmentFormBtn.style.display = "flex";
+    currentAuthText.style.display = "block";
+    addMoreDepartmentWrapper.style.display = "block";
+    authTags.style.display = "block";
+    createAdminBtnWrapper.style.marginTop = "24px";
+  }
+
+  // Event listeners
+  addAsDepartmentAdminButton.addEventListener("change",handleDisplayDepartmentDropdownMenu);
+  openNewDepartmentFormBtn.addEventListener("click", showNewDepartmentForm);
+  saveNewDepartmentBtn.addEventListener("click", closeNewDepartmentForm)
+  
 }

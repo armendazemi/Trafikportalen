@@ -422,6 +422,72 @@
     margin: 0;
     transition: all ease-out 300ms;
   }
+
+  .create-new-department {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    .create-new-button {
+      display: flex;
+      justify-content: flex-end;
+      .clear-button {
+        color: $primary600;
+        font-size: 14px;
+      }
+    }
+    .new-department-title {
+      font-weight: 500;
+      color: $primary900;
+      margin-bottom: 16px;
+      display: none;
+    }
+    .new-department-form {
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      max-height: 0px;
+      pointer-events: none;
+      background-color: $primary100;
+      padding: 0px;
+      gap: 24px;
+      transition: all 300ms ease-out;
+      .input-wrapper {
+        p {
+          margin-bottom: 4px;
+        }
+      }
+      .zip-city {
+        display: flex;
+        gap: 16px;
+        .zip {
+          flex:1
+        }
+        .city {
+          flex:2;
+        }
+      }
+
+      .bottom-buttons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        margin-top: 8px;
+        transition: all 300ms ease-out;
+        .undo {
+          color: $alerts600
+        }
+        .save {
+          color: $primary600;
+        }
+      }
+    }
+  }
+}
+.add-admin-btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
 }
 // MODAL STYLING
 
